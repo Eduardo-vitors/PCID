@@ -1,0 +1,3 @@
+# Define atrasos genéricos de entrada e saída (exemplo)
+set_input_delay  1.0 [get_ports {A B C D}]
+set_output_delay 1.0 [get_ports {NS LO}]

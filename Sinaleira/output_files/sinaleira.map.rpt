@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sinaleira
-Wed Dec 24 17:17:33 2025
+Thu Dec 25 09:28:06 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 24 17:17:33 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 25 09:28:06 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; sinaleira                                   ;
 ; Top-level Entity Name              ; sinaleira                                   ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                            ; sinaleira          ; sinaleira          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
+; Use smart compilation                                            ; On                 ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
 ; Restructure Multiplexers                                         ; Auto               ; Auto               ;
@@ -155,20 +155,21 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                               ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
-; sinaleira.v                      ; yes             ; User Verilog HDL File  ; C:/Trabalho_PCID/sinaleira.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; sinaleira.v                      ; yes             ; User Verilog HDL File  ; C:/Trabalho_PCID/Sinaleira/sinaleira.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -259,12 +260,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Dec 24 17:17:26 2025
+    Info: Processing started: Thu Dec 25 09:27:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sinaleira -c sinaleira
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sinaleira.v
-    Info (12023): Found entity 1: sinaleira File: C:/Trabalho_PCID/sinaleira.v Line: 1
+    Info (12023): Found entity 1: sinaleira File: C:/Trabalho_PCID/Sinaleira/sinaleira.v Line: 1
 Warning (12019): Can't analyze file -- file sinaleira.bdf is missing
 Info (12021): Found 1 design units, including 1 entities, in source file semaforo.bdf
     Info (12023): Found entity 1: semaforo
@@ -277,9 +278,9 @@ Info (21057): Implemented 7 device resources after synthesis - the final resourc
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4779 megabytes
-    Info: Processing ended: Wed Dec 24 17:17:33 2025
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Thu Dec 25 09:28:06 2025
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:14
 
 

@@ -1,0 +1,9 @@
+|sinaleira
+A => NS.IN0
+B => NS.IN1
+C => NS.IN1
+D => NS.IN1
+NS <= NS.DB_MAX_OUTPUT_PORT_TYPE
+LO <= NS.DB_MAX_OUTPUT_PORT_TYPE
+
+

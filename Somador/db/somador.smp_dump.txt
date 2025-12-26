@@ -1,0 +1,16 @@
+
+State Machine - |TOP|FSM:fsm|state
+Name state.ST_READY_PULSE state.ST_NEXT_BLOCK state.ST_WREN_OFF state.ST_WREN_ON state.ST_WRITE_PREP state.ST_ADD state.ST_CAPTURE state.ST_WAIT_3 state.ST_WAIT_2 state.ST_WAIT_1 state.ST_RDEN_ON state.ST_SET_READ_ADDR state.ST_RESET_CLEAR 
+state.ST_RESET_CLEAR 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ST_SET_READ_ADDR 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ST_RDEN_ON 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ST_WAIT_1 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ST_WAIT_2 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ST_WAIT_3 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ST_CAPTURE 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ST_ADD 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.ST_WRITE_PREP 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ST_WREN_ON 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ST_WREN_OFF 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ST_NEXT_BLOCK 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ST_READY_PULSE 1 0 0 0 0 0 0 0 0 0 0 0 1 
