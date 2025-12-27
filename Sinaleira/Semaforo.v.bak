@@ -1,0 +1,53 @@
+`timescale 1ns/1ps
+
+module tb_sinaleira;
+
+    // Entradas
+    reg A, B, C, D;
+
+    // Saídas
+    wire NS;
+    wire LO;
+
+    // Instância do DUT
+    sinaleira dut (
+        .A(A),
+        .B(B),
+        .C(C),
+        .D(D),
+        .NS(NS),
+        .LO(LO)
+    );
+
+    integer i;
+    reg ns_esperado;
+
+    initial begin
+        $display("=========================================================");
+        $display(" CASO | A B C D | (A|B)&~C&~D | NS LO | RESULTADO ");
+        $display("=========================================================");
+
+        for (i = 0; i < 16; i = i + 1) begin
+            {A, B, C, D} = i[3:0];
+            #5;
+
+            // cálculo esperado
+            ns_esperado = (A | B) & (~C) & (~D);
+
+            #5;
+
+            if (NS === ns_esperado)
+                $display("  %2d  | %b %b %b %b |      %b       |  %b  %b |  OK",
+                          i, A, B, C, D, ns_esperado, NS, LO);
+            else
+                $display("  %2d  | %b %b %b %b |      %b       |  %b  %b |  ERRO",
+                          i, A, B, C, D, ns_esperado, NS, LO);
+        end
+
+        $display("=========================================================");
+        $display(" FIM DA SIMULACAO ");
+        $display("=========================================================");
+        $finish;
+    end
+
+endmodule

@@ -1,0 +1,85 @@
+# Reading pref.tcl
+# do sinaleira_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/ENGG56/Sinaleira {C:/ENGG56/Sinaleira/sinaleira.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:25:28 on Dec 26,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/Sinaleira" C:/ENGG56/Sinaleira/sinaleira.v 
+# -- Compiling module sinaleira
+# 
+# Top level modules:
+# 	sinaleira
+# End time: 15:25:28 on Dec 26,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/ENGG56/Sinaleira/Semaforo.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:25:36 on Dec 26,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/Sinaleira/Semaforo.v 
+# -- Compiling module tb_sinaleira
+# 
+# Top level modules:
+# 	tb_sinaleira
+# End time: 15:25:36 on Dec 26,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/ENGG56/Sinaleira/sinaleira.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:25:36 on Dec 26,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/Sinaleira/sinaleira.v 
+# -- Compiling module sinaleira
+# 
+# Top level modules:
+# 	sinaleira
+# End time: 15:25:36 on Dec 26,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.tb_sinaleira
+# vsim -gui -l msim_transcript work.tb_sinaleira 
+# Start time: 15:25:45 on Dec 26,2025
+# Loading work.tb_sinaleira
+# Loading work.sinaleira
+add wave -position insertpoint  \
+sim:/tb_sinaleira/A \
+sim:/tb_sinaleira/B \
+sim:/tb_sinaleira/C \
+sim:/tb_sinaleira/D \
+sim:/tb_sinaleira/NS \
+sim:/tb_sinaleira/LO \
+sim:/tb_sinaleira/i \
+sim:/tb_sinaleira/ns_esperado
+run -all
+# =========================================================
+#  CASO | A B C D | (A|B)&~C&~D | NS LO | RESULTADO 
+# =========================================================
+#    0  | 0 0 0 0 |      0       |  0  1 |  OK
+#    1  | 0 0 0 1 |      0       |  0  1 |  OK
+#    2  | 0 0 1 0 |      0       |  0  1 |  OK
+#    3  | 0 0 1 1 |      0       |  0  1 |  OK
+#    4  | 0 1 0 0 |      1       |  1  0 |  OK
+#    5  | 0 1 0 1 |      0       |  0  1 |  OK
+#    6  | 0 1 1 0 |      0       |  0  1 |  OK
+#    7  | 0 1 1 1 |      0       |  0  1 |  OK
+#    8  | 1 0 0 0 |      1       |  1  0 |  OK
+#    9  | 1 0 0 1 |      0       |  0  1 |  OK
+#   10  | 1 0 1 0 |      0       |  0  1 |  OK
+#   11  | 1 0 1 1 |      0       |  0  1 |  OK
+#   12  | 1 1 0 0 |      1       |  1  0 |  OK
+#   13  | 1 1 0 1 |      0       |  0  1 |  OK
+#   14  | 1 1 1 0 |      0       |  0  1 |  OK
+#   15  | 1 1 1 1 |      0       |  0  1 |  OK
+# =========================================================
+#  FIM DA SIMULACAO 
+# =========================================================
+# ** Note: $stop    : C:/ENGG56/Sinaleira/Semaforo.v(50)
+#    Time: 160 ns  Iteration: 0  Instance: /tb_sinaleira
+# Break in Module tb_sinaleira at C:/ENGG56/Sinaleira/Semaforo.v line 50
+# End time: 15:28:26 on Dec 26,2025, Elapsed time: 0:02:41
+# Errors: 0, Warnings: 0

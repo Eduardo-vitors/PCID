@@ -1,0 +1,237 @@
+/* TESTBENCH DO TOP (COM DISPLAY DIDÁTICO) */
+
+`define periodo 20
+`define meioperiodo (`periodo/2)
+
+`timescale 1ns/1ns
+module TOP_TB;
+
+    reg clk, reset;
+
+    wire [15:0] datain;     // q da Mem (vai pro TOP)
+    wire [15:0] dataout;    // data do TOP (vai pra Mem)
+    wire [4:0]  address_top;
+    wire        rden_top, wren, ready;
+
+    // ---- Controle do "modo clone" (copiar RAM antes)
+    reg  rden_tb;
+    reg  ativa_clk_top;
+    reg  [4:0] cont_mem_read;
+
+    // RAM clonada (espelho pra conferir depois)
+    reg [15:0] r_mem [0:31];
+
+    // RAM real do projeto
+    wire [4:0] address_mem;
+    wire       rden_mem;
+    wire       clk_top;
+
+    // tempos para checagens (mantive as do seu exemplo)
+    reg [13:0] time_addr, time_datain, time_dataout;
+    reg [13:0] time_pos_rden, time_neg_rden;
+    reg [13:0] time_pos_wren, time_neg_wren;
+    reg [13:0] time_pos_ready, time_neg_ready;
+
+    // =========================
+    // Ligações (iguais ao exemplo)
+    // =========================
+    assign clk_top     = ativa_clk_top && clk;
+    assign address_mem = address_top | cont_mem_read;   // durante clone, força varrer endereços
+    assign rden_mem    = rden_top || rden_tb;
+
+    // DUT
+    TOP top_teste(
+        .clk(clk_top),
+        .reset(reset),
+        .ready(ready),
+        .address(address_top),
+        .rden(rden_top),
+        .wren(wren),
+        .datain(datain),
+        .dataout(dataout)
+    );
+
+    // Memória (mesmo nome do exemplo)
+    Mem ram(
+        .address(address_mem),
+        .clock(clk),
+        .data(dataout),
+        .rden(rden_mem),
+        .wren(wren),
+        .q(datain)
+    );
+
+    // =========================
+    // Clock
+    // =========================
+    always begin
+        #`meioperiodo clk = ~clk;
+    end
+
+    // =========================
+    // Inicialização / Clone da RAM
+    // =========================
+    integer i;
+    initial begin
+        // init defaults
+        clk           = 0;
+        reset         = 0;
+        ativa_clk_top = 1;
+        rden_tb       = 0;
+        cont_mem_read = 0;
+
+        for (i=0; i<32; i=i+1) r_mem[i] = 16'h0000;
+
+        $display("============================================================");
+        $display("INICIO DA SIMULACAO - TOP");
+        $display("Periodo=%0dns | MeioPeriodo=%0dns", `periodo, `meioperiodo);
+        $display("============================================================");
+
+        // alguns clocks iniciais
+        #(`periodo*2);
+
+        // pausar o TOP e clonar a RAM
+        ativa_clk_top = 0;
+        reset = 1;
+        $display("T=%0t | TOP pausado (clk_top=0) e reset=1 para clonar RAM.", $time);
+
+        // Varre os 32 endereços lendo a RAM e salvando em r_mem[]
+        repeat(32) begin
+            rden_tb = 1;
+            #`periodo;        // espera 1 ciclo com rden
+            rden_tb = 0;
+
+            // espera um pouco para q estabilizar (meio ciclo)
+            #(`meioperiodo);
+            r_mem[cont_mem_read] = datain;
+
+            $display("T=%0t | CLONE RAM[%0d] = 0x%04h (%0d)",
+                     $time, cont_mem_read, datain, datain);
+
+            cont_mem_read = cont_mem_read + 1;
+
+            #(`meioperiodo); // completa o ciclo
+        end
+
+        $display("============================================================");
+        $display("Memoria RAM clonada em r_mem[0..31].");
+        $display("Agora liberando TOP para executar.");
+        $display("============================================================");
+
+        // libera reset e liga clock do TOP
+        reset = 0;
+        ativa_clk_top = 1;
+
+        // roda até ready acontecer (o TB também para sozinho quando ready cai)
+    end
+
+    // =========================
+    // Displays gerais (monitor)
+    // =========================
+    always @(posedge clk_top) begin
+        $display("T=%0t | clk_top↑ | addr=%0d | rden=%b wren=%b | datain=0x%04h dataout=0x%04h | ready=%b",
+                 $time, address_top, rden_top, wren, datain, dataout, ready);
+    end
+
+    // =========================
+    // Atualiza o espelho r_mem quando escreve (wren)
+    // =========================
+    always @(posedge wren) begin
+        r_mem[address_mem] = dataout;
+
+        $display("T=%0t | >>> ESCRITA: RAM[%0d] <= 0x%04h (%0d)",
+                 $time, address_mem, dataout, dataout);
+    end
+
+    // =========================
+    // Checagens (mantidas do exemplo)
+    // =========================
+    always @ (address_top) begin
+        time_addr = $time;
+    end
+
+    always @ (datain) begin
+        time_datain = $time;
+        if(time_datain - time_pos_rden > (2)*`periodo) begin
+            $display("ERRO - DATAIN nao estavel antes do proximo load.");
+            $display("Simulacao encerrada com erros.");
+            $stop;
+        end
+    end
+
+    always @ (dataout) begin
+        time_dataout = $time;
+        if(time_dataout - time_pos_rden < `periodo) begin
+            $display("ERRO - DATAOUT mudou cedo demais apos RDEN.");
+            $display("Simulacao encerrada com erros.");
+            $stop;
+        end
+    end
+
+    always @ (wren) begin
+        if(wren) begin
+            time_pos_wren = $time;
+            if(time_pos_wren - time_addr < `periodo) begin
+                $display("ERRO - WREN subiu muito perto da mudanca de ADDRESS.");
+                $display("Simulacao encerrada com erros.");
+                $stop;
+            end
+        end else begin
+            time_neg_wren = $time;
+            if(time_neg_wren - time_addr < time_pos_wren - time_addr) begin
+                $display("ERRO - ADDRESS alterou enquanto WREN estava ativo.");
+                $display("Simulacao encerrada com erros.");
+                $stop;
+            end
+        end
+    end
+
+    always @ (rden_top) begin
+        if(rden_top) begin
+            time_pos_rden = $time;
+        end else begin
+            time_neg_rden = $time;
+            if(time_neg_rden - time_pos_rden < 4*`periodo) begin
+                $display("ERRO - RDEN nao ficou ativo por 4 ciclos.");
+                $display("Simulacao encerrada com erros.");
+                $stop;
+            end
+        end
+    end
+
+    // =========================
+    // Finalização com resumo
+    // =========================
+    task print_block_sum(input integer base);
+        integer k;
+        integer sum;
+        begin
+            sum = 0;
+            for (k=0; k<7; k=k+1) sum = sum + r_mem[base+k];
+            $display("BLOCO %0d..%0d: soma esperada=%0d | valor em RAM[%0d]=%0d (0x%04h)",
+                     base, base+6, sum, base+7, r_mem[base+7], r_mem[base+7]);
+        end
+    endtask
+
+    always @ (ready) begin
+        if(ready) begin
+            time_pos_ready = $time;
+            $display("============================================================");
+            $display("T=%0t | READY=1 -> TOP terminou a sequencia!", $time);
+            $display("Resumo dos blocos (verificando posicoes 7,15,23,31):");
+            print_block_sum(0);
+            print_block_sum(8);
+            print_block_sum(16);
+            print_block_sum(24);
+            $display("============================================================");
+        end else begin
+            time_neg_ready = $time;
+            if(time_neg_ready > 0) begin
+                #200;
+                $display("Simulacao concluida com sucesso.");
+                $stop;
+            end
+        end
+    end
+
+endmodule

@@ -1,5 +1,5 @@
 Assembler report for somador
-Thu Dec 25 14:09:48 2025
+Sat Dec 27 07:07:39 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -9,9 +9,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   1. Legal Notice
   2. Assembler Summary
   3. Assembler Settings
-  4. Assembler Generated Files
-  5. Assembler Device Options: C:/Trabalho_PCID/Somador/output_files/somador.sof
-  6. Assembler Messages
+  4. Assembler Encrypted IP Cores Summary
+  5. Assembler Generated Files
+  6. Assembler Device Options: C:/ENGG56/Somador/output_files/somador.sof
+  7. Assembler Messages
 
 
 
@@ -38,9 +39,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Dec 25 14:09:48 2025 ;
+; Assembler Status      ; Successful - Sat Dec 27 07:07:39 2025 ;
 ; Revision Name         ; somador                               ;
-; Top-level Entity Name ; TOP                                   ;
+; Top-level Entity Name ; Somador16                             ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE115F29C7                         ;
 +-----------------------+---------------------------------------+
@@ -53,23 +54,33 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------+
-; Assembler Generated Files                         ;
-+---------------------------------------------------+
-; File Name                                         ;
-+---------------------------------------------------+
-; C:/Trabalho_PCID/Somador/output_files/somador.sof ;
-+---------------------------------------------------+
++------------------------------------------------+
+; Assembler Encrypted IP Cores Summary           ;
++--------+------------------------+--------------+
+; Vendor ; IP Core Name           ; License Type ;
++--------+------------------------+--------------+
+; Altera ; Signal Tap (6AF7 BCE1) ; Licensed     ;
+; Altera ; Signal Tap (6AF7 BCEC) ; Licensed     ;
++--------+------------------------+--------------+
 
 
-+-----------------------------------------------------------------------------+
-; Assembler Device Options: C:/Trabalho_PCID/Somador/output_files/somador.sof ;
-+----------------+------------------------------------------------------------+
-; Option         ; Setting                                                    ;
-+----------------+------------------------------------------------------------+
-; JTAG usercode  ; 0x0056CF6F                                                 ;
-; Checksum       ; 0x0056CF6F                                                 ;
-+----------------+------------------------------------------------------------+
++--------------------------------------------+
+; Assembler Generated Files                  ;
++--------------------------------------------+
+; File Name                                  ;
++--------------------------------------------+
+; C:/ENGG56/Somador/output_files/somador.sof ;
++--------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Assembler Device Options: C:/ENGG56/Somador/output_files/somador.sof ;
++----------------+-----------------------------------------------------+
+; Option         ; Setting                                             ;
++----------------+-----------------------------------------------------+
+; JTAG usercode  ; 0x005908C4                                          ;
+; Checksum       ; 0x005908C4                                          ;
++----------------+-----------------------------------------------------+
 
 
 +--------------------+
@@ -78,15 +89,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Dec 25 14:09:45 2025
+    Info: Processing started: Sat Dec 27 07:07:35 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off somador -c somador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4698 megabytes
-    Info: Processing ended: Thu Dec 25 14:09:48 2025
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Sat Dec 27 07:07:39 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

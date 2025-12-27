@@ -1,5 +1,5 @@
 Analysis & Synthesis report for somador
-Thu Dec 25 14:09:35 2025
+Sat Dec 27 07:07:18 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,13 +13,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |TOP|FSM:fsm|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |Somador16|TOP:inst|FSM:fsm|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|altsyncram_lvq2:altsyncram1
+ 16. Parameter Settings for User Entity Instance: memoria:inst2|altsyncram:altsyncram_component
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. In-System Memory Content Editor Settings
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -46,18 +53,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 25 14:09:35 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 27 07:07:18 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; somador                                     ;
-; Top-level Entity Name              ; TOP                                         ;
+; Top-level Entity Name              ; Somador16                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 66                                          ;
-;     Total combinational functions  ; 50                                          ;
-;     Dedicated logic registers      ; 60                                          ;
-; Total registers                    ; 60                                          ;
-; Total pins                         ; 42                                          ;
+; Total logic elements               ; 286                                         ;
+;     Total combinational functions  ; 228                                         ;
+;     Dedicated logic registers      ; 188                                         ;
+; Total registers                    ; 188                                         ;
+; Total pins                         ; 19                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
+; Total memory bits                  ; 512                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -69,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; TOP                ; somador            ;
+; Top-level entity name                                            ; Somador16          ; somador            ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -166,64 +173,129 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                        ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path          ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
-; TOP.v                            ; yes             ; User Verilog HDL File  ; C:/Trabalho_PCID/Somador/TOP.v        ;         ;
-; Acumulador.v                     ; yes             ; User Verilog HDL File  ; C:/Trabalho_PCID/Somador/Acumulador.v ;         ;
-; FSM.v                            ; yes             ; User Verilog HDL File  ; C:/Trabalho_PCID/Somador/FSM.v        ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                       ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                             ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------+-------------+
+; TOP.v                                                              ; yes             ; User Verilog HDL File                        ; C:/ENGG56/Somador/TOP.v                                                                  ;             ;
+; Acumulador.v                                                       ; yes             ; User Verilog HDL File                        ; C:/ENGG56/Somador/Acumulador.v                                                           ;             ;
+; FSM.v                                                              ; yes             ; User Verilog HDL File                        ; C:/ENGG56/Somador/FSM.v                                                                  ;             ;
+; Somador16.bdf                                                      ; yes             ; User Block Diagram/Schematic File            ; C:/ENGG56/Somador/Somador16.bdf                                                          ;             ;
+; memoria.vhd                                                        ; yes             ; User Wizard-Generated File                   ; C:/ENGG56/Somador/memoria.vhd                                                            ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                    ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc             ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                       ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                    ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                    ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                     ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                        ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                        ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                      ;             ;
+; db/altsyncram_3lt3.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/ENGG56/Somador/db/altsyncram_3lt3.tdf                                                 ;             ;
+; db/altsyncram_lvq2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/ENGG56/Somador/db/altsyncram_lvq2.tdf                                                 ;             ;
+; RAM.mif                                                            ; yes             ; Auto-Found Memory Initialization File        ; C:/ENGG56/Somador/RAM.mif                                                                ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd               ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd     ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                    ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                       ; altera_sld  ;
+; db/ip/sld25a2f7b2/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/ENGG56/Somador/db/ip/sld25a2f7b2/alt_sld_fab.v                                        ; alt_sld_fab ;
+; db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab.v                 ; alt_sld_fab ;
+; db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_ident.sv          ; alt_sld_fab ;
+; db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_presplit.sv       ; alt_sld_fab ;
+; db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd     ; alt_sld_fab ;
+; db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_splitter.sv       ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                  ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------+-------------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 66        ;
-;                                             ;           ;
-; Total combinational functions               ; 50        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 11        ;
-;     -- 3 input functions                    ; 23        ;
-;     -- <=2 input functions                  ; 16        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 35        ;
-;     -- arithmetic mode                      ; 15        ;
-;                                             ;           ;
-; Total registers                             ; 60        ;
-;     -- Dedicated logic registers            ; 60        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 42        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 60        ;
-; Total fan-out                               ; 409       ;
-; Average fan-out                             ; 2.11      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 286                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 228                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 89                       ;
+;     -- 3 input functions                    ; 75                       ;
+;     -- <=2 input functions                  ; 64                       ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 193                      ;
+;     -- arithmetic mode                      ; 35                       ;
+;                                             ;                          ;
+; Total registers                             ; 188                      ;
+;     -- Dedicated logic registers            ; 188                      ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 19                       ;
+; Total memory bits                           ; 512                      ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 168                      ;
+; Total fan-out                               ; 1657                     ;
+; Average fan-out                             ; 3.46                     ;
++---------------------------------------------+--------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |TOP                       ; 50 (0)              ; 60 (0)                    ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |TOP                ; TOP         ; work         ;
-;    |Acumulador:acc|        ; 16 (16)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|Acumulador:acc ; Acumulador  ; work         ;
-;    |FSM:fsm|               ; 34 (34)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP|FSM:fsm        ; FSM         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; |Somador16                                                                                                                              ; 228 (2)             ; 188 (0)                   ; 512         ; 0            ; 0       ; 0         ; 19   ; 0            ; |Somador16                                                                                                                                                                                                                                                                                                                                            ; Somador16                         ; work         ;
+;    |TOP:inst|                                                                                                                           ; 35 (0)              ; 60 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|TOP:inst                                                                                                                                                                                                                                                                                                                                   ; TOP                               ; work         ;
+;       |Acumulador:acc|                                                                                                                  ; 16 (16)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|TOP:inst|Acumulador:acc                                                                                                                                                                                                                                                                                                                    ; Acumulador                        ; work         ;
+;       |FSM:fsm|                                                                                                                         ; 19 (19)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|TOP:inst|FSM:fsm                                                                                                                                                                                                                                                                                                                           ; FSM                               ; work         ;
+;    |memoria:inst2|                                                                                                                      ; 73 (0)              ; 42 (0)                    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|memoria:inst2                                                                                                                                                                                                                                                                                                                              ; memoria                           ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 73 (0)              ; 42 (0)                    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|memoria:inst2|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                              ; altsyncram                        ; work         ;
+;          |altsyncram_3lt3:auto_generated|                                                                                               ; 73 (0)              ; 42 (0)                    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated                                                                                                                                                                                                                                                               ; altsyncram_3lt3                   ; work         ;
+;             |altsyncram_lvq2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|altsyncram_lvq2:altsyncram1                                                                                                                                                                                                                                   ; altsyncram_lvq2                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 73 (48)             ; 42 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                     ; sld_mod_ram_rom                   ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 25 (25)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                  ; sld_rom_sr                        ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 118 (1)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 117 (0)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 117 (0)             ; 86 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 117 (1)             ; 86 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 116 (0)             ; 81 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 116 (80)            ; 81 (53)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
+;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 18 (18)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
+;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                         ;
++---------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+---------+
+; Name                                                                                                                ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF     ;
++---------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+---------+
+; memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|altsyncram_lvq2:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 32           ; 16           ; 32           ; 16           ; 512  ; RAM.mif ;
++---------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                            ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                                ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |Somador16|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
+; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |Somador16|memoria:inst2                                                                                                                                                                                                                                                       ; memoria.vhd     ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |TOP|FSM:fsm|state                                                                                                                                                                                                                                                          ;
+; State Machine - |Somador16|TOP:inst|FSM:fsm|state                                                                                                                                                                                                                                           ;
 +------------------------+----------------------+---------------------+-------------------+------------------+---------------------+--------------+------------------+-----------------+-----------------+-----------------+------------------+------------------------+----------------------+
 ; Name                   ; state.ST_READY_PULSE ; state.ST_NEXT_BLOCK ; state.ST_WREN_OFF ; state.ST_WREN_ON ; state.ST_WRITE_PREP ; state.ST_ADD ; state.ST_CAPTURE ; state.ST_WAIT_3 ; state.ST_WAIT_2 ; state.ST_WAIT_1 ; state.ST_RDEN_ON ; state.ST_SET_READ_ADDR ; state.ST_RESET_CLEAR ;
 +------------------------+----------------------+---------------------+-------------------+------------------+---------------------+--------------+------------------+-----------------+-----------------+-----------------+------------------+------------------------+----------------------+
@@ -248,13 +320,12 @@ Encoding Type:  One-Hot
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; FSM:fsm|block_base[1,2]               ; Merged with FSM:fsm|block_base[0]      ;
-; FSM:fsm|block_base[0]                 ; Stuck at GND due to stuck port data_in ;
-; FSM:fsm|state~2                       ; Lost fanout                            ;
-; FSM:fsm|state~3                       ; Lost fanout                            ;
-; FSM:fsm|state~4                       ; Lost fanout                            ;
-; FSM:fsm|state~5                       ; Lost fanout                            ;
-; FSM:fsm|state.ST_ADD                  ; Merged with FSM:fsm|load               ;
+; TOP:inst|FSM:fsm|block_base[0..2]     ; Stuck at GND due to stuck port data_in ;
+; TOP:inst|FSM:fsm|state~4              ; Lost fanout                            ;
+; TOP:inst|FSM:fsm|state~5              ; Lost fanout                            ;
+; TOP:inst|FSM:fsm|state~6              ; Lost fanout                            ;
+; TOP:inst|FSM:fsm|state~7              ; Lost fanout                            ;
+; TOP:inst|FSM:fsm|state.ST_ADD         ; Merged with TOP:inst|FSM:fsm|load      ;
 ; Total Number of Removed Registers = 8 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
@@ -264,24 +335,138 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 60    ;
-; Number of registers using Synchronous Clear  ; 9     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Total registers                              ; 188   ;
+; Number of registers using Synchronous Clear  ; 17    ;
+; Number of registers using Synchronous Load   ; 15    ;
+; Number of registers using Asynchronous Clear ; 110   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 37    ;
+; Number of registers using Clock Enable       ; 130   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
+; Total number of inverted registers = 2                                                                                                                                                                                                                                                                                          ;         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[4]                                                ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]                                                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Somador16|TOP:inst|FSM:fsm|address[1]                                                                                                                                               ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |Somador16|memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|altsyncram_lvq2:altsyncram1 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoria:inst2|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                        ;
+; WIDTH_A                            ; 16                   ; Signed Integer                 ;
+; WIDTHAD_A                          ; 5                    ; Signed Integer                 ;
+; NUMWORDS_A                         ; 32                   ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 1                    ; Signed Integer                 ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                 ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; RAM.mif              ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_3lt3      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                          ;
++-------------------------------------------+-----------------------------------------------+
+; Name                                      ; Value                                         ;
++-------------------------------------------+-----------------------------------------------+
+; Number of entity instances                ; 1                                             ;
+; Entity Instance                           ; memoria:inst2|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                   ;
+;     -- WIDTH_A                            ; 16                                            ;
+;     -- NUMWORDS_A                         ; 32                                            ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                        ;
+;     -- WIDTH_B                            ; 1                                             ;
+;     -- NUMWORDS_B                         ; 0                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
++-------------------------------------------+-----------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TOP|FSM:fsm|address[3]    ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP|FSM:fsm|address[1]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; In-System Memory Content Editor Settings                                                                                                 ;
++----------------+-------------+-------+-------+------------+------------------------------------------------------------------------------+
+; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                           ;
++----------------+-------------+-------+-------+------------+------------------------------------------------------------------------------+
+; 0              ; SRAM        ; 16    ; 32    ; Read/Write ; memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated ;
++----------------+-------------+-------+-------+------------+------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -289,22 +474,27 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 42                          ;
-; cycloneiii_ff         ; 60                          ;
-;     ENA               ; 5                           ;
-;     ENA CLR           ; 32                          ;
-;     SCLR              ; 9                           ;
-;     plain             ; 14                          ;
-; cycloneiii_lcell_comb ; 50                          ;
-;     arith             ; 15                          ;
+; boundary_port         ; 46                          ;
+; cycloneiii_ff         ; 102                         ;
+;     CLR               ; 30                          ;
+;     ENA               ; 20                          ;
+;     ENA CLR           ; 42                          ;
+;     ENA CLR SLD       ; 5                           ;
+;     ENA SCLR          ; 5                           ;
+; cycloneiii_lcell_comb ; 109                         ;
+;     arith             ; 27                          ;
+;         2 data inputs ; 12                          ;
 ;         3 data inputs ; 15                          ;
-;     normal            ; 35                          ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 11                          ;
+;     normal            ; 82                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 38                          ;
+; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.50                        ;
-; Average LUT depth     ; 1.39                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -323,31 +513,143 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Dec 25 14:09:29 2025
+    Info: Processing started: Sat Dec 27 07:06:56 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off somador -c somador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
-    Info (12023): Found entity 1: TOP File: C:/Trabalho_PCID/Somador/TOP.v Line: 1
+    Info (12023): Found entity 1: TOP File: C:/ENGG56/Somador/TOP.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file acumulador.v
-    Info (12023): Found entity 1: Acumulador File: C:/Trabalho_PCID/Somador/Acumulador.v Line: 1
+    Info (12023): Found entity 1: Acumulador File: C:/ENGG56/Somador/Acumulador.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
-    Info (12023): Found entity 1: FSM File: C:/Trabalho_PCID/Somador/FSM.v Line: 1
-Info (12127): Elaborating entity "TOP" for the top level hierarchy
-Info (12128): Elaborating entity "Acumulador" for hierarchy "Acumulador:acc" File: C:/Trabalho_PCID/Somador/TOP.v Line: 25
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Trabalho_PCID/Somador/TOP.v Line: 38
-Info (286030): Timing-Driven Synthesis is running
+    Info (12023): Found entity 1: FSM File: C:/ENGG56/Somador/FSM.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_acumulador.v
+    Info (12023): Found entity 1: tb_Acumulador File: C:/ENGG56/Somador/tb_Acumulador.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file somador16.bdf
+    Info (12023): Found entity 1: Somador16
+Info (12021): Found 2 design units, including 1 entities, in source file memoria.vhd
+    Info (12022): Found design unit 1: memoria-SYN File: C:/ENGG56/Somador/memoria.vhd Line: 56
+    Info (12023): Found entity 1: memoria File: C:/ENGG56/Somador/memoria.vhd Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file tb_fsm.v
+    Info (12023): Found entity 1: FSM_TB File: C:/ENGG56/Somador/tb_FSM.v Line: 7
+Warning (10274): Verilog HDL macro warning at tb_TOP.v(6): overriding existing definition for macro "meioperiodo", which was defined in "tb_FSM.v", line 5 File: C:/ENGG56/Somador/tb_TOP.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file tb_top.v
+    Info (12023): Found entity 1: TOP_TB File: C:/ENGG56/Somador/tb_TOP.v Line: 7
+Info (12127): Elaborating entity "Somador16" for the top level hierarchy
+Info (12128): Elaborating entity "TOP" for hierarchy "TOP:inst"
+Info (12128): Elaborating entity "Acumulador" for hierarchy "TOP:inst|Acumulador:acc" File: C:/ENGG56/Somador/TOP.v Line: 25
+Info (12128): Elaborating entity "FSM" for hierarchy "TOP:inst|FSM:fsm" File: C:/ENGG56/Somador/TOP.v Line: 38
+Info (12128): Elaborating entity "memoria" for hierarchy "memoria:inst2"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memoria:inst2|altsyncram:altsyncram_component" File: C:/ENGG56/Somador/memoria.vhd Line: 63
+Info (12130): Elaborated megafunction instantiation "memoria:inst2|altsyncram:altsyncram_component" File: C:/ENGG56/Somador/memoria.vhd Line: 63
+Info (12133): Instantiated megafunction "memoria:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/ENGG56/Somador/memoria.vhd Line: 63
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "RAM.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=SRAM"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3lt3.tdf
+    Info (12023): Found entity 1: altsyncram_3lt3 File: C:/ENGG56/Somador/db/altsyncram_3lt3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_3lt3" for hierarchy "memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_lvq2.tdf
+    Info (12023): Found entity 1: altsyncram_lvq2 File: C:/ENGG56/Somador/db/altsyncram_lvq2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_lvq2" for hierarchy "memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|altsyncram_lvq2:altsyncram1" File: C:/ENGG56/Somador/db/altsyncram_3lt3.tdf Line: 38
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/ENGG56/Somador/db/altsyncram_3lt3.tdf Line: 39
+Info (12130): Elaborated megafunction instantiation "memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/ENGG56/Somador/db/altsyncram_3lt3.tdf Line: 39
+Info (12133): Instantiated megafunction "memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/ENGG56/Somador/db/altsyncram_3lt3.tdf Line: 39
+    Info (12134): Parameter "CVALUE" = "0000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "1397899597"
+    Info (12134): Parameter "NUMWORDS" = "32"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
+    Info (12134): Parameter "WIDTH_WORD" = "16"
+    Info (12134): Parameter "WIDTHAD" = "5"
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "memoria:inst2|altsyncram:altsyncram_component|altsyncram_3lt3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2025.12.27.07:07:10 Progress: Loading sld25a2f7b2/alt_sld_fab_wrapper_hw.tcl
+Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
+Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
+Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
+Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit"
+Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter"
+Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric"
+Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident"
+Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
+Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld25a2f7b2/alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab File: C:/ENGG56/Somador/db/ip/sld25a2f7b2/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/ENGG56/Somador/db/ip/sld25a2f7b2/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 109 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 67 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Thu Dec 25 14:09:35 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:13
+Info (21057): Implemented 330 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 290 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Sat Dec 27 07:07:18 2025
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:33
 
 

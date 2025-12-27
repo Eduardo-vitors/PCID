@@ -1,5 +1,5 @@
 
-State Machine - |TOP|FSM:fsm|state
+State Machine - |Somador16|TOP:inst|FSM:fsm|state
 Name state.ST_READY_PULSE state.ST_NEXT_BLOCK state.ST_WREN_OFF state.ST_WREN_ON state.ST_WRITE_PREP state.ST_ADD state.ST_CAPTURE state.ST_WAIT_3 state.ST_WAIT_2 state.ST_WAIT_1 state.ST_RDEN_ON state.ST_SET_READ_ADDR state.ST_RESET_CLEAR 
 state.ST_RESET_CLEAR 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.ST_SET_READ_ADDR 0 0 0 0 0 0 0 0 0 0 0 1 1 
