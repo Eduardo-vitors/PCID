@@ -35,6 +35,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 16 128 72 152))
 )
 (pin
 	(input)
@@ -51,6 +52,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -24 200 48 224))
 )
 (pin
 	(output)
@@ -67,6 +69,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 712 184 776 208))
 )
 (pin
 	(output)
@@ -83,6 +86,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1176 264 1248 576))
 )
 (symbol
 	(rect 296 144 496 288)
@@ -113,35 +117,35 @@ https://fpgasoftware.intel.com/eula.
 		(pt 200 32)
 		(output)
 		(text "ready" (rect 0 0 28 12)(font "Arial" ))
-		(text "ready" (rect 156 27 179 39)(font "Arial" ))
+		(text "ready" (rect 156 27 184 39)(font "Arial" ))
 		(line (pt 200 32)(pt 184 32))
 	)
 	(port
 		(pt 200 48)
 		(output)
 		(text "address[4..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "address[4..0]" (rect 125 43 179 55)(font "Arial" ))
+		(text "address[4..0]" (rect 125 43 189 55)(font "Arial" ))
 		(line (pt 200 48)(pt 184 48)(line_width 3))
 	)
 	(port
 		(pt 200 64)
 		(output)
 		(text "rden" (rect 0 0 21 12)(font "Arial" ))
-		(text "rden" (rect 162 59 179 71)(font "Arial" ))
+		(text "rden" (rect 162 59 183 71)(font "Arial" ))
 		(line (pt 200 64)(pt 184 64))
 	)
 	(port
 		(pt 200 80)
 		(output)
 		(text "wren" (rect 0 0 22 12)(font "Arial" ))
-		(text "wren" (rect 161 75 179 87)(font "Arial" ))
+		(text "wren" (rect 161 75 183 87)(font "Arial" ))
 		(line (pt 200 80)(pt 184 80))
 	)
 	(port
 		(pt 200 96)
 		(output)
 		(text "dataout[15..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "dataout[15..0]" (rect 122 91 179 103)(font "Arial" ))
+		(text "dataout[15..0]" (rect 122 91 190 103)(font "Arial" ))
 		(line (pt 200 96)(pt 184 96)(line_width 3))
 	)
 	(drawing

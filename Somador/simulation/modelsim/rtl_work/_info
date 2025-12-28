@@ -11,7 +11,7 @@ z2
 cModel Technology
 Z0 dC:/ENGG56/Somador/simulation/modelsim
 vAcumulador
-!s110 1766829452
+!s110 1766887362
 !i10b 1
 !s100 _HiP8ocZA@bFYSm;PV>9a3
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -27,7 +27,7 @@ Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1766829452.000000
+!s108 1766887362.000000
 !s107 C:/ENGG56/Somador/Acumulador.v|
 !s90 -reportprogress|300|-work|work|C:/ENGG56/Somador/Acumulador.v|
 !i113 1
@@ -35,7 +35,7 @@ Z4 o-work work
 Z5 tCvgOpt 0
 n@acumulador
 vFSM
-!s110 1766829453
+!s110 1766887364
 !i10b 1
 !s100 [Y>jZedQPK3@?2a]h40na3
 R1
@@ -51,7 +51,7 @@ R3
 r1
 !s85 0
 31
-!s108 1766829453.000000
+!s108 1766887364.000000
 !s107 C:/ENGG56/Somador/FSM.v|
 !s90 -reportprogress|300|-work|work|C:/ENGG56/Somador/FSM.v|
 !i113 1
@@ -73,9 +73,9 @@ Vb:F?;_9Y3`Z4_SEd547KC3
 !s100 Yn;PRDcFSBRf7LWGEe`232
 Z12 OV;C;2020.1;71
 32
-Z13 !s110 1766829449
+Z13 !s110 1766887360
 !i10b 1
-Z14 !s108 1766829449.000000
+Z14 !s108 1766887360.000000
 Z15 !s90 -reportprogress|300|-work|work|C:/ENGG56/Somador/memoria.vhd|
 Z16 !s107 C:/ENGG56/Somador/memoria.vhd|
 !i113 1
@@ -102,7 +102,7 @@ R16
 R4
 R17
 vTOP
-!s110 1766829456
+!s110 1766887367
 !i10b 1
 !s100 b3W^8]ADWMc9FKook;>eA0
 R1
@@ -118,7 +118,7 @@ R3
 r1
 !s85 0
 31
-!s108 1766829456.000000
+!s108 1766887367.000000
 !s107 C:/ENGG56/Somador/TOP.v|
 !s90 -reportprogress|300|-work|work|C:/ENGG56/Somador/TOP.v|
 !i113 1
@@ -126,7 +126,7 @@ R4
 R5
 n@t@o@p
 vTOP_TB
-!s110 1766829457
+!s110 1766887370
 !i10b 1
 !s100 2gM:WF1Z5Kf11f=1[Aji83
 R1
@@ -142,7 +142,7 @@ R3
 r1
 !s85 0
 31
-!s108 1766829457.000000
+!s108 1766887370.000000
 !s107 C:/ENGG56/Somador/tb_TOP.v|
 !s90 -reportprogress|300|-work|work|C:/ENGG56/Somador/tb_TOP.v|
 !i113 1

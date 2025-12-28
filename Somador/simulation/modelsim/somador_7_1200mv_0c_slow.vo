@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "12/27/2025 07:07:58"
+// DATE "12/27/2025 10:44:54"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -6616,7 +6616,7 @@ defparam \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 .po
 defparam \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 .port_b_read_enable_clock = "clock1";
 defparam \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 .port_b_write_enable_clock = "clock1";
 defparam \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 .ram_block_type = "M9K";
-defparam \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 .mem_init0 = 576'h000002E67021A85BA0013581ADA0C8B425E600000020001000080004000200010000800000000463E0CC48246005738023E00180005100000440407CB805D500070036F0087005EB;
+defparam \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 .mem_init0 = 576'h00000190132088009E0903CB7A40061455E30000004151FFE000F507A10BF50009903C48000008F040048C221E311CC05B01F43C02D8000004BB82B16C18421AD1403DB0EFB812D5;
 // synopsys translate_on
 
 // Location: LCCOMB_X77_Y60_N26

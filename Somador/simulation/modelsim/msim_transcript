@@ -12,37 +12,37 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/ENGG56/Somador {C:/ENGG56/Somador/TOP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:08 on Dec 27,2025
+# Start time: 23:02:29 on Dec 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/Somador" C:/ENGG56/Somador/TOP.v 
 # -- Compiling module TOP
 # 
 # Top level modules:
 # 	TOP
-# End time: 06:57:08 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:29 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/ENGG56/Somador {C:/ENGG56/Somador/Acumulador.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:08 on Dec 27,2025
+# Start time: 23:02:30 on Dec 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/Somador" C:/ENGG56/Somador/Acumulador.v 
 # -- Compiling module Acumulador
 # 
 # Top level modules:
 # 	Acumulador
-# End time: 06:57:08 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:30 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/ENGG56/Somador {C:/ENGG56/Somador/FSM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:09 on Dec 27,2025
+# Start time: 23:02:30 on Dec 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/Somador" C:/ENGG56/Somador/FSM.v 
 # -- Compiling module FSM
 # 
 # Top level modules:
 # 	FSM
-# End time: 06:57:09 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:30 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/ENGG56/Somador/memoria.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:09 on Dec 27,2025
+# Start time: 23:02:30 on Dec 27,2025
 # vcom -reportprogress 300 -93 -work work C:/ENGG56/Somador/memoria.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -50,12 +50,12 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity memoria
 # -- Compiling architecture SYN of memoria
-# End time: 06:57:09 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:30 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vcom -reportprogress 300 -work work C:/ENGG56/Somador/memoria.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:29 on Dec 27,2025
+# Start time: 23:02:40 on Dec 27,2025
 # vcom -reportprogress 300 -work work C:/ENGG56/Somador/memoria.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -63,51 +63,51 @@ vcom -reportprogress 300 -work work C:/ENGG56/Somador/memoria.vhd
 # -- Loading package altera_mf_components
 # -- Compiling entity memoria
 # -- Compiling architecture SYN of memoria
-# End time: 06:57:29 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:40 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/ENGG56/Somador/Acumulador.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:32 on Dec 27,2025
+# Start time: 23:02:42 on Dec 27,2025
 # vlog -reportprogress 300 -work work C:/ENGG56/Somador/Acumulador.v 
 # -- Compiling module Acumulador
 # 
 # Top level modules:
 # 	Acumulador
-# End time: 06:57:32 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:42 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/ENGG56/Somador/FSM.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:33 on Dec 27,2025
+# Start time: 23:02:44 on Dec 27,2025
 # vlog -reportprogress 300 -work work C:/ENGG56/Somador/FSM.v 
 # -- Compiling module FSM
 # 
 # Top level modules:
 # 	FSM
-# End time: 06:57:33 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:44 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/ENGG56/Somador/TOP.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:36 on Dec 27,2025
+# Start time: 23:02:47 on Dec 27,2025
 # vlog -reportprogress 300 -work work C:/ENGG56/Somador/TOP.v 
 # -- Compiling module TOP
 # 
 # Top level modules:
 # 	TOP
-# End time: 06:57:36 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:47 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/ENGG56/Somador/tb_TOP.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:57:37 on Dec 27,2025
+# Start time: 23:02:50 on Dec 27,2025
 # vlog -reportprogress 300 -work work C:/ENGG56/Somador/tb_TOP.v 
 # -- Compiling module TOP_TB
 # 
 # Top level modules:
 # 	TOP_TB
-# End time: 06:57:37 on Dec 27,2025, Elapsed time: 0:00:00
+# End time: 23:02:50 on Dec 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim -gui -l msim_transcript work.TOP_TB
 # vsim -gui -l msim_transcript work.TOP_TB 
-# Start time: 06:59:14 on Dec 27,2025
+# Start time: 23:03:02 on Dec 27,2025
 # Loading work.TOP_TB
 # Loading work.TOP
 # Loading work.Acumulador
@@ -147,37 +147,37 @@ run -all
 # Periodo=20ns | MeioPeriodo=10ns
 # ============================================================
 # T=80 | [CLONE] TOP pausado (clk_top=0). Clonando RAM...
-# T=120 | [CLONE] RAM[0] = 0x05eb (1515)
-# T=160 | [CLONE] RAM[1] = 0x021c (540)
-# T=200 | [CLONE] RAM[2] = 0x036f (879)
-# T=240 | [CLONE] RAM[3] = 0x001c (28)
-# T=280 | [CLONE] RAM[4] = 0x05d5 (1493)
-# T=320 | [CLONE] RAM[5] = 0x1f2e (7982)
-# T=360 | [CLONE] RAM[6] = 0x4404 (17412)
+# T=120 | [CLONE] RAM[0] = 0x12d5 (4821)
+# T=160 | [CLONE] RAM[1] = 0x3bee (15342)
+# T=200 | [CLONE] RAM[2] = 0x03db (987)
+# T=240 | [CLONE] RAM[3] = 0x6b45 (27461)
+# T=280 | [CLONE] RAM[4] = 0x1842 (6210)
+# T=320 | [CLONE] RAM[5] = 0xac5b (44123)
+# T=360 | [CLONE] RAM[6] = 0x4bb8 (19384)
 # T=400 | [CLONE] RAM[7] = 0x0000 (0)
-# T=440 | [CLONE] RAM[8] = 0x0051 (81)
-# T=480 | [CLONE] RAM[9] = 0x0060 (96)
-# T=520 | [CLONE] RAM[10] = 0x023e (574)
-# T=560 | [CLONE] RAM[11] = 0x15ce (5582)
-# T=600 | [CLONE] RAM[12] = 0x2460 (9312)
-# T=640 | [CLONE] RAM[13] = 0x3312 (13074)
-# T=680 | [CLONE] RAM[14] = 0x463e (17982)
+# T=440 | [CLONE] RAM[8] = 0x02d8 (728)
+# T=480 | [CLONE] RAM[9] = 0x7d0f (32015)
+# T=520 | [CLONE] RAM[10] = 0x05b0 (1456)
+# T=560 | [CLONE] RAM[11] = 0xc473 (50291)
+# T=600 | [CLONE] RAM[12] = 0x221e (8734)
+# T=640 | [CLONE] RAM[13] = 0x0123 (291)
+# T=680 | [CLONE] RAM[14] = 0x8f04 (36612)
 # T=720 | [CLONE] RAM[15] = 0x0000 (0)
-# T=760 | [CLONE] RAM[16] = 0x8000 (32768)
-# T=800 | [CLONE] RAM[17] = 0x4000 (16384)
-# T=840 | [CLONE] RAM[18] = 0x2000 (8192)
-# T=880 | [CLONE] RAM[19] = 0x1000 (4096)
-# T=920 | [CLONE] RAM[20] = 0x0800 (2048)
-# T=960 | [CLONE] RAM[21] = 0x0400 (1024)
-# T=1000 | [CLONE] RAM[22] = 0x0200 (512)
+# T=760 | [CLONE] RAM[16] = 0x3c48 (15432)
+# T=800 | [CLONE] RAM[17] = 0x0264 (612)
+# T=840 | [CLONE] RAM[18] = 0xbf50 (48976)
+# T=880 | [CLONE] RAM[19] = 0x1e84 (7812)
+# T=920 | [CLONE] RAM[20] = 0x00f5 (245)
+# T=960 | [CLONE] RAM[21] = 0x7ff8 (32760)
+# T=1000 | [CLONE] RAM[22] = 0x0415 (1045)
 # T=1040 | [CLONE] RAM[23] = 0x0000 (0)
-# T=1080 | [CLONE] RAM[24] = 0x25e6 (9702)
-# T=1120 | [CLONE] RAM[25] = 0x322d (12845)
-# T=1160 | [CLONE] RAM[26] = 0x1ada (6874)
-# T=1200 | [CLONE] RAM[27] = 0x04d6 (1238)
-# T=1240 | [CLONE] RAM[28] = 0x5ba0 (23456)
-# T=1280 | [CLONE] RAM[29] = 0x086a (2154)
-# T=1320 | [CLONE] RAM[30] = 0x2e67 (11879)
+# T=1080 | [CLONE] RAM[24] = 0x55e3 (21987)
+# T=1120 | [CLONE] RAM[25] = 0x0185 (389)
+# T=1160 | [CLONE] RAM[26] = 0xb7a4 (47012)
+# T=1200 | [CLONE] RAM[27] = 0x240f (9231)
+# T=1240 | [CLONE] RAM[28] = 0x009e (158)
+# T=1280 | [CLONE] RAM[29] = 0xc822 (51234)
+# T=1320 | [CLONE] RAM[30] = 0x1901 (6401)
 # T=1360 | [CLONE] RAM[31] = 0x0000 (0)
 # T=1360 | [CLONE] Memoria RAM Clonada.
 # T=1360 | Reset liberado (reset=0). Iniciando TOP.
@@ -186,234 +186,234 @@ run -all
 # T=1410 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x0000 dataout=0x0000 | ready=0
 # T=1430 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x0000 dataout=0x0000 | ready=0
 # T=1450 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x0000 dataout=0x0000 | ready=0
-# T=1470 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x05eb dataout=0x0000 | ready=0
-# T=1490 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x05eb dataout=0x0000 | ready=0
-# T=1510 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x05eb dataout=0x0000 | ready=0
-# T=1530 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x05eb dataout=0x05eb | ready=0
-# T=1550 | [TOP] addr_top=1 | rden=0 wren=0 | datain=0x05eb dataout=0x05eb | ready=0
-# T=1570 | [TOP] addr_top=1 | rden=1 wren=0 | datain=0x05eb dataout=0x05eb | ready=0
-# T=1590 | [TOP] addr_top=1 | rden=1 wren=0 | datain=0x05eb dataout=0x05eb | ready=0
-# T=1610 | [TOP] addr_top=1 | rden=1 wren=0 | datain=0x021c dataout=0x05eb | ready=0
-# T=1630 | [TOP] addr_top=1 | rden=1 wren=0 | datain=0x021c dataout=0x05eb | ready=0
-# T=1650 | [TOP] addr_top=1 | rden=0 wren=0 | datain=0x021c dataout=0x05eb | ready=0
-# T=1670 | [TOP] addr_top=1 | rden=0 wren=0 | datain=0x021c dataout=0x0807 | ready=0
-# T=1690 | [TOP] addr_top=2 | rden=0 wren=0 | datain=0x021c dataout=0x0807 | ready=0
-# T=1710 | [TOP] addr_top=2 | rden=1 wren=0 | datain=0x021c dataout=0x0807 | ready=0
-# T=1730 | [TOP] addr_top=2 | rden=1 wren=0 | datain=0x021c dataout=0x0807 | ready=0
-# T=1750 | [TOP] addr_top=2 | rden=1 wren=0 | datain=0x036f dataout=0x0807 | ready=0
-# T=1770 | [TOP] addr_top=2 | rden=1 wren=0 | datain=0x036f dataout=0x0807 | ready=0
-# T=1790 | [TOP] addr_top=2 | rden=0 wren=0 | datain=0x036f dataout=0x0807 | ready=0
-# T=1810 | [TOP] addr_top=2 | rden=0 wren=0 | datain=0x036f dataout=0x0b76 | ready=0
-# T=1830 | [TOP] addr_top=3 | rden=0 wren=0 | datain=0x036f dataout=0x0b76 | ready=0
-# T=1850 | [TOP] addr_top=3 | rden=1 wren=0 | datain=0x036f dataout=0x0b76 | ready=0
-# T=1870 | [TOP] addr_top=3 | rden=1 wren=0 | datain=0x036f dataout=0x0b76 | ready=0
-# T=1890 | [TOP] addr_top=3 | rden=1 wren=0 | datain=0x001c dataout=0x0b76 | ready=0
-# T=1910 | [TOP] addr_top=3 | rden=1 wren=0 | datain=0x001c dataout=0x0b76 | ready=0
-# T=1930 | [TOP] addr_top=3 | rden=0 wren=0 | datain=0x001c dataout=0x0b76 | ready=0
-# T=1950 | [TOP] addr_top=3 | rden=0 wren=0 | datain=0x001c dataout=0x0b92 | ready=0
-# T=1970 | [TOP] addr_top=4 | rden=0 wren=0 | datain=0x001c dataout=0x0b92 | ready=0
-# T=1990 | [TOP] addr_top=4 | rden=1 wren=0 | datain=0x001c dataout=0x0b92 | ready=0
-# T=2010 | [TOP] addr_top=4 | rden=1 wren=0 | datain=0x001c dataout=0x0b92 | ready=0
-# T=2030 | [TOP] addr_top=4 | rden=1 wren=0 | datain=0x05d5 dataout=0x0b92 | ready=0
-# T=2050 | [TOP] addr_top=4 | rden=1 wren=0 | datain=0x05d5 dataout=0x0b92 | ready=0
-# T=2070 | [TOP] addr_top=4 | rden=0 wren=0 | datain=0x05d5 dataout=0x0b92 | ready=0
-# T=2090 | [TOP] addr_top=4 | rden=0 wren=0 | datain=0x05d5 dataout=0x1167 | ready=0
-# T=2110 | [TOP] addr_top=5 | rden=0 wren=0 | datain=0x05d5 dataout=0x1167 | ready=0
-# T=2130 | [TOP] addr_top=5 | rden=1 wren=0 | datain=0x05d5 dataout=0x1167 | ready=0
-# T=2150 | [TOP] addr_top=5 | rden=1 wren=0 | datain=0x05d5 dataout=0x1167 | ready=0
-# T=2170 | [TOP] addr_top=5 | rden=1 wren=0 | datain=0x1f2e dataout=0x1167 | ready=0
-# T=2190 | [TOP] addr_top=5 | rden=1 wren=0 | datain=0x1f2e dataout=0x1167 | ready=0
-# T=2210 | [TOP] addr_top=5 | rden=0 wren=0 | datain=0x1f2e dataout=0x1167 | ready=0
-# T=2230 | [TOP] addr_top=5 | rden=0 wren=0 | datain=0x1f2e dataout=0x3095 | ready=0
-# T=2250 | [TOP] addr_top=6 | rden=0 wren=0 | datain=0x1f2e dataout=0x3095 | ready=0
-# T=2270 | [TOP] addr_top=6 | rden=1 wren=0 | datain=0x1f2e dataout=0x3095 | ready=0
-# T=2290 | [TOP] addr_top=6 | rden=1 wren=0 | datain=0x1f2e dataout=0x3095 | ready=0
-# T=2310 | [TOP] addr_top=6 | rden=1 wren=0 | datain=0x4404 dataout=0x3095 | ready=0
-# T=2330 | [TOP] addr_top=6 | rden=1 wren=0 | datain=0x4404 dataout=0x3095 | ready=0
-# T=2350 | [TOP] addr_top=6 | rden=0 wren=0 | datain=0x4404 dataout=0x3095 | ready=0
-# T=2370 | [TOP] addr_top=6 | rden=0 wren=0 | datain=0x4404 dataout=0x7499 | ready=0
-# T=2390 | [TOP] addr_top=7 | rden=0 wren=0 | datain=0x4404 dataout=0x7499 | ready=0
-# T=2390 | [WRITE] addr=7 | dataout=0x7499 (29849)
-# T=2410 | [TOP] addr_top=7 | rden=0 wren=1 | datain=0x4404 dataout=0x7499 | ready=0
-# T=2430 | [TOP] addr_top=7 | rden=0 wren=0 | datain=0x4404 dataout=0x7499 | ready=0
-# T=2450 | [TOP] addr_top=7 | rden=0 wren=0 | datain=0x4404 dataout=0x0000 | ready=0
-# T=2470 | [TOP] addr_top=7 | rden=0 wren=0 | datain=0x4404 dataout=0x0000 | ready=0
-# T=2490 | [TOP] addr_top=8 | rden=0 wren=0 | datain=0x4404 dataout=0x0000 | ready=0
-# T=2510 | [TOP] addr_top=8 | rden=1 wren=0 | datain=0x4404 dataout=0x0000 | ready=0
-# T=2530 | [TOP] addr_top=8 | rden=1 wren=0 | datain=0x4404 dataout=0x0000 | ready=0
-# T=2550 | [TOP] addr_top=8 | rden=1 wren=0 | datain=0x0051 dataout=0x0000 | ready=0
-# T=2570 | [TOP] addr_top=8 | rden=1 wren=0 | datain=0x0051 dataout=0x0000 | ready=0
-# T=2590 | [TOP] addr_top=8 | rden=0 wren=0 | datain=0x0051 dataout=0x0000 | ready=0
-# T=2610 | [TOP] addr_top=8 | rden=0 wren=0 | datain=0x0051 dataout=0x0051 | ready=0
-# T=2630 | [TOP] addr_top=9 | rden=0 wren=0 | datain=0x0051 dataout=0x0051 | ready=0
-# T=2650 | [TOP] addr_top=9 | rden=1 wren=0 | datain=0x0051 dataout=0x0051 | ready=0
-# T=2670 | [TOP] addr_top=9 | rden=1 wren=0 | datain=0x0051 dataout=0x0051 | ready=0
-# T=2690 | [TOP] addr_top=9 | rden=1 wren=0 | datain=0x0060 dataout=0x0051 | ready=0
-# T=2710 | [TOP] addr_top=9 | rden=1 wren=0 | datain=0x0060 dataout=0x0051 | ready=0
-# T=2730 | [TOP] addr_top=9 | rden=0 wren=0 | datain=0x0060 dataout=0x0051 | ready=0
-# T=2750 | [TOP] addr_top=9 | rden=0 wren=0 | datain=0x0060 dataout=0x00b1 | ready=0
-# T=2770 | [TOP] addr_top=10 | rden=0 wren=0 | datain=0x0060 dataout=0x00b1 | ready=0
-# T=2790 | [TOP] addr_top=10 | rden=1 wren=0 | datain=0x0060 dataout=0x00b1 | ready=0
-# T=2810 | [TOP] addr_top=10 | rden=1 wren=0 | datain=0x0060 dataout=0x00b1 | ready=0
-# T=2830 | [TOP] addr_top=10 | rden=1 wren=0 | datain=0x023e dataout=0x00b1 | ready=0
-# T=2850 | [TOP] addr_top=10 | rden=1 wren=0 | datain=0x023e dataout=0x00b1 | ready=0
-# T=2870 | [TOP] addr_top=10 | rden=0 wren=0 | datain=0x023e dataout=0x00b1 | ready=0
-# T=2890 | [TOP] addr_top=10 | rden=0 wren=0 | datain=0x023e dataout=0x02ef | ready=0
-# T=2910 | [TOP] addr_top=11 | rden=0 wren=0 | datain=0x023e dataout=0x02ef | ready=0
-# T=2930 | [TOP] addr_top=11 | rden=1 wren=0 | datain=0x023e dataout=0x02ef | ready=0
-# T=2950 | [TOP] addr_top=11 | rden=1 wren=0 | datain=0x023e dataout=0x02ef | ready=0
-# T=2970 | [TOP] addr_top=11 | rden=1 wren=0 | datain=0x15ce dataout=0x02ef | ready=0
-# T=2990 | [TOP] addr_top=11 | rden=1 wren=0 | datain=0x15ce dataout=0x02ef | ready=0
-# T=3010 | [TOP] addr_top=11 | rden=0 wren=0 | datain=0x15ce dataout=0x02ef | ready=0
-# T=3030 | [TOP] addr_top=11 | rden=0 wren=0 | datain=0x15ce dataout=0x18bd | ready=0
-# T=3050 | [TOP] addr_top=12 | rden=0 wren=0 | datain=0x15ce dataout=0x18bd | ready=0
-# T=3070 | [TOP] addr_top=12 | rden=1 wren=0 | datain=0x15ce dataout=0x18bd | ready=0
-# T=3090 | [TOP] addr_top=12 | rden=1 wren=0 | datain=0x15ce dataout=0x18bd | ready=0
-# T=3110 | [TOP] addr_top=12 | rden=1 wren=0 | datain=0x2460 dataout=0x18bd | ready=0
-# T=3130 | [TOP] addr_top=12 | rden=1 wren=0 | datain=0x2460 dataout=0x18bd | ready=0
-# T=3150 | [TOP] addr_top=12 | rden=0 wren=0 | datain=0x2460 dataout=0x18bd | ready=0
-# T=3170 | [TOP] addr_top=12 | rden=0 wren=0 | datain=0x2460 dataout=0x3d1d | ready=0
-# T=3190 | [TOP] addr_top=13 | rden=0 wren=0 | datain=0x2460 dataout=0x3d1d | ready=0
-# T=3210 | [TOP] addr_top=13 | rden=1 wren=0 | datain=0x2460 dataout=0x3d1d | ready=0
-# T=3230 | [TOP] addr_top=13 | rden=1 wren=0 | datain=0x2460 dataout=0x3d1d | ready=0
-# T=3250 | [TOP] addr_top=13 | rden=1 wren=0 | datain=0x3312 dataout=0x3d1d | ready=0
-# T=3270 | [TOP] addr_top=13 | rden=1 wren=0 | datain=0x3312 dataout=0x3d1d | ready=0
-# T=3290 | [TOP] addr_top=13 | rden=0 wren=0 | datain=0x3312 dataout=0x3d1d | ready=0
-# T=3310 | [TOP] addr_top=13 | rden=0 wren=0 | datain=0x3312 dataout=0x702f | ready=0
-# T=3330 | [TOP] addr_top=14 | rden=0 wren=0 | datain=0x3312 dataout=0x702f | ready=0
-# T=3350 | [TOP] addr_top=14 | rden=1 wren=0 | datain=0x3312 dataout=0x702f | ready=0
-# T=3370 | [TOP] addr_top=14 | rden=1 wren=0 | datain=0x3312 dataout=0x702f | ready=0
-# T=3390 | [TOP] addr_top=14 | rden=1 wren=0 | datain=0x463e dataout=0x702f | ready=0
-# T=3410 | [TOP] addr_top=14 | rden=1 wren=0 | datain=0x463e dataout=0x702f | ready=0
-# T=3430 | [TOP] addr_top=14 | rden=0 wren=0 | datain=0x463e dataout=0x702f | ready=0
-# T=3450 | [TOP] addr_top=14 | rden=0 wren=0 | datain=0x463e dataout=0xb66d | ready=0
-# T=3470 | [TOP] addr_top=15 | rden=0 wren=0 | datain=0x463e dataout=0xb66d | ready=0
-# T=3470 | [WRITE] addr=15 | dataout=0xb66d (46701)
-# T=3490 | [TOP] addr_top=15 | rden=0 wren=1 | datain=0x463e dataout=0xb66d | ready=0
-# T=3510 | [TOP] addr_top=15 | rden=0 wren=0 | datain=0x463e dataout=0xb66d | ready=0
-# T=3530 | [TOP] addr_top=15 | rden=0 wren=0 | datain=0x463e dataout=0x0000 | ready=0
-# T=3550 | [TOP] addr_top=15 | rden=0 wren=0 | datain=0x463e dataout=0x0000 | ready=0
-# T=3570 | [TOP] addr_top=16 | rden=0 wren=0 | datain=0x463e dataout=0x0000 | ready=0
-# T=3590 | [TOP] addr_top=16 | rden=1 wren=0 | datain=0x463e dataout=0x0000 | ready=0
-# T=3610 | [TOP] addr_top=16 | rden=1 wren=0 | datain=0x463e dataout=0x0000 | ready=0
-# T=3630 | [TOP] addr_top=16 | rden=1 wren=0 | datain=0x8000 dataout=0x0000 | ready=0
-# T=3650 | [TOP] addr_top=16 | rden=1 wren=0 | datain=0x8000 dataout=0x0000 | ready=0
-# T=3670 | [TOP] addr_top=16 | rden=0 wren=0 | datain=0x8000 dataout=0x0000 | ready=0
-# T=3690 | [TOP] addr_top=16 | rden=0 wren=0 | datain=0x8000 dataout=0x8000 | ready=0
-# T=3710 | [TOP] addr_top=17 | rden=0 wren=0 | datain=0x8000 dataout=0x8000 | ready=0
-# T=3730 | [TOP] addr_top=17 | rden=1 wren=0 | datain=0x8000 dataout=0x8000 | ready=0
-# T=3750 | [TOP] addr_top=17 | rden=1 wren=0 | datain=0x8000 dataout=0x8000 | ready=0
-# T=3770 | [TOP] addr_top=17 | rden=1 wren=0 | datain=0x4000 dataout=0x8000 | ready=0
-# T=3790 | [TOP] addr_top=17 | rden=1 wren=0 | datain=0x4000 dataout=0x8000 | ready=0
-# T=3810 | [TOP] addr_top=17 | rden=0 wren=0 | datain=0x4000 dataout=0x8000 | ready=0
-# T=3830 | [TOP] addr_top=17 | rden=0 wren=0 | datain=0x4000 dataout=0xc000 | ready=0
-# T=3850 | [TOP] addr_top=18 | rden=0 wren=0 | datain=0x4000 dataout=0xc000 | ready=0
-# T=3870 | [TOP] addr_top=18 | rden=1 wren=0 | datain=0x4000 dataout=0xc000 | ready=0
-# T=3890 | [TOP] addr_top=18 | rden=1 wren=0 | datain=0x4000 dataout=0xc000 | ready=0
-# T=3910 | [TOP] addr_top=18 | rden=1 wren=0 | datain=0x2000 dataout=0xc000 | ready=0
-# T=3930 | [TOP] addr_top=18 | rden=1 wren=0 | datain=0x2000 dataout=0xc000 | ready=0
-# T=3950 | [TOP] addr_top=18 | rden=0 wren=0 | datain=0x2000 dataout=0xc000 | ready=0
-# T=3970 | [TOP] addr_top=18 | rden=0 wren=0 | datain=0x2000 dataout=0xe000 | ready=0
-# T=3990 | [TOP] addr_top=19 | rden=0 wren=0 | datain=0x2000 dataout=0xe000 | ready=0
-# T=4010 | [TOP] addr_top=19 | rden=1 wren=0 | datain=0x2000 dataout=0xe000 | ready=0
-# T=4030 | [TOP] addr_top=19 | rden=1 wren=0 | datain=0x2000 dataout=0xe000 | ready=0
-# T=4050 | [TOP] addr_top=19 | rden=1 wren=0 | datain=0x1000 dataout=0xe000 | ready=0
-# T=4070 | [TOP] addr_top=19 | rden=1 wren=0 | datain=0x1000 dataout=0xe000 | ready=0
-# T=4090 | [TOP] addr_top=19 | rden=0 wren=0 | datain=0x1000 dataout=0xe000 | ready=0
-# T=4110 | [TOP] addr_top=19 | rden=0 wren=0 | datain=0x1000 dataout=0xf000 | ready=0
-# T=4130 | [TOP] addr_top=20 | rden=0 wren=0 | datain=0x1000 dataout=0xf000 | ready=0
-# T=4150 | [TOP] addr_top=20 | rden=1 wren=0 | datain=0x1000 dataout=0xf000 | ready=0
-# T=4170 | [TOP] addr_top=20 | rden=1 wren=0 | datain=0x1000 dataout=0xf000 | ready=0
-# T=4190 | [TOP] addr_top=20 | rden=1 wren=0 | datain=0x0800 dataout=0xf000 | ready=0
-# T=4210 | [TOP] addr_top=20 | rden=1 wren=0 | datain=0x0800 dataout=0xf000 | ready=0
-# T=4230 | [TOP] addr_top=20 | rden=0 wren=0 | datain=0x0800 dataout=0xf000 | ready=0
-# T=4250 | [TOP] addr_top=20 | rden=0 wren=0 | datain=0x0800 dataout=0xf800 | ready=0
-# T=4270 | [TOP] addr_top=21 | rden=0 wren=0 | datain=0x0800 dataout=0xf800 | ready=0
-# T=4290 | [TOP] addr_top=21 | rden=1 wren=0 | datain=0x0800 dataout=0xf800 | ready=0
-# T=4310 | [TOP] addr_top=21 | rden=1 wren=0 | datain=0x0800 dataout=0xf800 | ready=0
-# T=4330 | [TOP] addr_top=21 | rden=1 wren=0 | datain=0x0400 dataout=0xf800 | ready=0
-# T=4350 | [TOP] addr_top=21 | rden=1 wren=0 | datain=0x0400 dataout=0xf800 | ready=0
-# T=4370 | [TOP] addr_top=21 | rden=0 wren=0 | datain=0x0400 dataout=0xf800 | ready=0
-# T=4390 | [TOP] addr_top=21 | rden=0 wren=0 | datain=0x0400 dataout=0xfc00 | ready=0
-# T=4410 | [TOP] addr_top=22 | rden=0 wren=0 | datain=0x0400 dataout=0xfc00 | ready=0
-# T=4430 | [TOP] addr_top=22 | rden=1 wren=0 | datain=0x0400 dataout=0xfc00 | ready=0
-# T=4450 | [TOP] addr_top=22 | rden=1 wren=0 | datain=0x0400 dataout=0xfc00 | ready=0
-# T=4470 | [TOP] addr_top=22 | rden=1 wren=0 | datain=0x0200 dataout=0xfc00 | ready=0
-# T=4490 | [TOP] addr_top=22 | rden=1 wren=0 | datain=0x0200 dataout=0xfc00 | ready=0
-# T=4510 | [TOP] addr_top=22 | rden=0 wren=0 | datain=0x0200 dataout=0xfc00 | ready=0
-# T=4530 | [TOP] addr_top=22 | rden=0 wren=0 | datain=0x0200 dataout=0xfe00 | ready=0
-# T=4550 | [TOP] addr_top=23 | rden=0 wren=0 | datain=0x0200 dataout=0xfe00 | ready=0
-# T=4550 | [WRITE] addr=23 | dataout=0xfe00 (65024)
-# T=4570 | [TOP] addr_top=23 | rden=0 wren=1 | datain=0x0200 dataout=0xfe00 | ready=0
-# T=4590 | [TOP] addr_top=23 | rden=0 wren=0 | datain=0x0200 dataout=0xfe00 | ready=0
-# T=4610 | [TOP] addr_top=23 | rden=0 wren=0 | datain=0x0200 dataout=0x0000 | ready=0
-# T=4630 | [TOP] addr_top=23 | rden=0 wren=0 | datain=0x0200 dataout=0x0000 | ready=0
-# T=4650 | [TOP] addr_top=24 | rden=0 wren=0 | datain=0x0200 dataout=0x0000 | ready=0
-# T=4670 | [TOP] addr_top=24 | rden=1 wren=0 | datain=0x0200 dataout=0x0000 | ready=0
-# T=4690 | [TOP] addr_top=24 | rden=1 wren=0 | datain=0x0200 dataout=0x0000 | ready=0
-# T=4710 | [TOP] addr_top=24 | rden=1 wren=0 | datain=0x25e6 dataout=0x0000 | ready=0
-# T=4730 | [TOP] addr_top=24 | rden=1 wren=0 | datain=0x25e6 dataout=0x0000 | ready=0
-# T=4750 | [TOP] addr_top=24 | rden=0 wren=0 | datain=0x25e6 dataout=0x0000 | ready=0
-# T=4770 | [TOP] addr_top=24 | rden=0 wren=0 | datain=0x25e6 dataout=0x25e6 | ready=0
-# T=4790 | [TOP] addr_top=25 | rden=0 wren=0 | datain=0x25e6 dataout=0x25e6 | ready=0
-# T=4810 | [TOP] addr_top=25 | rden=1 wren=0 | datain=0x25e6 dataout=0x25e6 | ready=0
-# T=4830 | [TOP] addr_top=25 | rden=1 wren=0 | datain=0x25e6 dataout=0x25e6 | ready=0
-# T=4850 | [TOP] addr_top=25 | rden=1 wren=0 | datain=0x322d dataout=0x25e6 | ready=0
-# T=4870 | [TOP] addr_top=25 | rden=1 wren=0 | datain=0x322d dataout=0x25e6 | ready=0
-# T=4890 | [TOP] addr_top=25 | rden=0 wren=0 | datain=0x322d dataout=0x25e6 | ready=0
-# T=4910 | [TOP] addr_top=25 | rden=0 wren=0 | datain=0x322d dataout=0x5813 | ready=0
-# T=4930 | [TOP] addr_top=26 | rden=0 wren=0 | datain=0x322d dataout=0x5813 | ready=0
-# T=4950 | [TOP] addr_top=26 | rden=1 wren=0 | datain=0x322d dataout=0x5813 | ready=0
-# T=4970 | [TOP] addr_top=26 | rden=1 wren=0 | datain=0x322d dataout=0x5813 | ready=0
-# T=4990 | [TOP] addr_top=26 | rden=1 wren=0 | datain=0x1ada dataout=0x5813 | ready=0
-# T=5010 | [TOP] addr_top=26 | rden=1 wren=0 | datain=0x1ada dataout=0x5813 | ready=0
-# T=5030 | [TOP] addr_top=26 | rden=0 wren=0 | datain=0x1ada dataout=0x5813 | ready=0
-# T=5050 | [TOP] addr_top=26 | rden=0 wren=0 | datain=0x1ada dataout=0x72ed | ready=0
-# T=5070 | [TOP] addr_top=27 | rden=0 wren=0 | datain=0x1ada dataout=0x72ed | ready=0
-# T=5090 | [TOP] addr_top=27 | rden=1 wren=0 | datain=0x1ada dataout=0x72ed | ready=0
-# T=5110 | [TOP] addr_top=27 | rden=1 wren=0 | datain=0x1ada dataout=0x72ed | ready=0
-# T=5130 | [TOP] addr_top=27 | rden=1 wren=0 | datain=0x04d6 dataout=0x72ed | ready=0
-# T=5150 | [TOP] addr_top=27 | rden=1 wren=0 | datain=0x04d6 dataout=0x72ed | ready=0
-# T=5170 | [TOP] addr_top=27 | rden=0 wren=0 | datain=0x04d6 dataout=0x72ed | ready=0
-# T=5190 | [TOP] addr_top=27 | rden=0 wren=0 | datain=0x04d6 dataout=0x77c3 | ready=0
-# T=5210 | [TOP] addr_top=28 | rden=0 wren=0 | datain=0x04d6 dataout=0x77c3 | ready=0
-# T=5230 | [TOP] addr_top=28 | rden=1 wren=0 | datain=0x04d6 dataout=0x77c3 | ready=0
-# T=5250 | [TOP] addr_top=28 | rden=1 wren=0 | datain=0x04d6 dataout=0x77c3 | ready=0
-# T=5270 | [TOP] addr_top=28 | rden=1 wren=0 | datain=0x5ba0 dataout=0x77c3 | ready=0
-# T=5290 | [TOP] addr_top=28 | rden=1 wren=0 | datain=0x5ba0 dataout=0x77c3 | ready=0
-# T=5310 | [TOP] addr_top=28 | rden=0 wren=0 | datain=0x5ba0 dataout=0x77c3 | ready=0
-# T=5330 | [TOP] addr_top=28 | rden=0 wren=0 | datain=0x5ba0 dataout=0xd363 | ready=0
-# T=5350 | [TOP] addr_top=29 | rden=0 wren=0 | datain=0x5ba0 dataout=0xd363 | ready=0
-# T=5370 | [TOP] addr_top=29 | rden=1 wren=0 | datain=0x5ba0 dataout=0xd363 | ready=0
-# T=5390 | [TOP] addr_top=29 | rden=1 wren=0 | datain=0x5ba0 dataout=0xd363 | ready=0
-# T=5410 | [TOP] addr_top=29 | rden=1 wren=0 | datain=0x086a dataout=0xd363 | ready=0
-# T=5430 | [TOP] addr_top=29 | rden=1 wren=0 | datain=0x086a dataout=0xd363 | ready=0
-# T=5450 | [TOP] addr_top=29 | rden=0 wren=0 | datain=0x086a dataout=0xd363 | ready=0
-# T=5470 | [TOP] addr_top=29 | rden=0 wren=0 | datain=0x086a dataout=0xdbcd | ready=0
-# T=5490 | [TOP] addr_top=30 | rden=0 wren=0 | datain=0x086a dataout=0xdbcd | ready=0
-# T=5510 | [TOP] addr_top=30 | rden=1 wren=0 | datain=0x086a dataout=0xdbcd | ready=0
-# T=5530 | [TOP] addr_top=30 | rden=1 wren=0 | datain=0x086a dataout=0xdbcd | ready=0
-# T=5550 | [TOP] addr_top=30 | rden=1 wren=0 | datain=0x2e67 dataout=0xdbcd | ready=0
-# T=5570 | [TOP] addr_top=30 | rden=1 wren=0 | datain=0x2e67 dataout=0xdbcd | ready=0
-# T=5590 | [TOP] addr_top=30 | rden=0 wren=0 | datain=0x2e67 dataout=0xdbcd | ready=0
-# T=5610 | [TOP] addr_top=30 | rden=0 wren=0 | datain=0x2e67 dataout=0x0a34 | ready=0
-# T=5630 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x2e67 dataout=0x0a34 | ready=0
-# T=5630 | [WRITE] addr=31 | dataout=0x0a34 (2612)
-# T=5650 | [TOP] addr_top=31 | rden=0 wren=1 | datain=0x2e67 dataout=0x0a34 | ready=0
-# T=5670 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x2e67 dataout=0x0a34 | ready=0
-# T=5690 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x2e67 dataout=0x0000 | ready=0
+# T=1470 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x12d5 dataout=0x0000 | ready=0
+# T=1490 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x12d5 dataout=0x0000 | ready=0
+# T=1510 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x12d5 dataout=0x0000 | ready=0
+# T=1530 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x12d5 dataout=0x12d5 | ready=0
+# T=1550 | [TOP] addr_top=1 | rden=0 wren=0 | datain=0x12d5 dataout=0x12d5 | ready=0
+# T=1570 | [TOP] addr_top=1 | rden=1 wren=0 | datain=0x12d5 dataout=0x12d5 | ready=0
+# T=1590 | [TOP] addr_top=1 | rden=1 wren=0 | datain=0x12d5 dataout=0x12d5 | ready=0
+# T=1610 | [TOP] addr_top=1 | rden=1 wren=0 | datain=0x3bee dataout=0x12d5 | ready=0
+# T=1630 | [TOP] addr_top=1 | rden=1 wren=0 | datain=0x3bee dataout=0x12d5 | ready=0
+# T=1650 | [TOP] addr_top=1 | rden=0 wren=0 | datain=0x3bee dataout=0x12d5 | ready=0
+# T=1670 | [TOP] addr_top=1 | rden=0 wren=0 | datain=0x3bee dataout=0x4ec3 | ready=0
+# T=1690 | [TOP] addr_top=2 | rden=0 wren=0 | datain=0x3bee dataout=0x4ec3 | ready=0
+# T=1710 | [TOP] addr_top=2 | rden=1 wren=0 | datain=0x3bee dataout=0x4ec3 | ready=0
+# T=1730 | [TOP] addr_top=2 | rden=1 wren=0 | datain=0x3bee dataout=0x4ec3 | ready=0
+# T=1750 | [TOP] addr_top=2 | rden=1 wren=0 | datain=0x03db dataout=0x4ec3 | ready=0
+# T=1770 | [TOP] addr_top=2 | rden=1 wren=0 | datain=0x03db dataout=0x4ec3 | ready=0
+# T=1790 | [TOP] addr_top=2 | rden=0 wren=0 | datain=0x03db dataout=0x4ec3 | ready=0
+# T=1810 | [TOP] addr_top=2 | rden=0 wren=0 | datain=0x03db dataout=0x529e | ready=0
+# T=1830 | [TOP] addr_top=3 | rden=0 wren=0 | datain=0x03db dataout=0x529e | ready=0
+# T=1850 | [TOP] addr_top=3 | rden=1 wren=0 | datain=0x03db dataout=0x529e | ready=0
+# T=1870 | [TOP] addr_top=3 | rden=1 wren=0 | datain=0x03db dataout=0x529e | ready=0
+# T=1890 | [TOP] addr_top=3 | rden=1 wren=0 | datain=0x6b45 dataout=0x529e | ready=0
+# T=1910 | [TOP] addr_top=3 | rden=1 wren=0 | datain=0x6b45 dataout=0x529e | ready=0
+# T=1930 | [TOP] addr_top=3 | rden=0 wren=0 | datain=0x6b45 dataout=0x529e | ready=0
+# T=1950 | [TOP] addr_top=3 | rden=0 wren=0 | datain=0x6b45 dataout=0xbde3 | ready=0
+# T=1970 | [TOP] addr_top=4 | rden=0 wren=0 | datain=0x6b45 dataout=0xbde3 | ready=0
+# T=1990 | [TOP] addr_top=4 | rden=1 wren=0 | datain=0x6b45 dataout=0xbde3 | ready=0
+# T=2010 | [TOP] addr_top=4 | rden=1 wren=0 | datain=0x6b45 dataout=0xbde3 | ready=0
+# T=2030 | [TOP] addr_top=4 | rden=1 wren=0 | datain=0x1842 dataout=0xbde3 | ready=0
+# T=2050 | [TOP] addr_top=4 | rden=1 wren=0 | datain=0x1842 dataout=0xbde3 | ready=0
+# T=2070 | [TOP] addr_top=4 | rden=0 wren=0 | datain=0x1842 dataout=0xbde3 | ready=0
+# T=2090 | [TOP] addr_top=4 | rden=0 wren=0 | datain=0x1842 dataout=0xd625 | ready=0
+# T=2110 | [TOP] addr_top=5 | rden=0 wren=0 | datain=0x1842 dataout=0xd625 | ready=0
+# T=2130 | [TOP] addr_top=5 | rden=1 wren=0 | datain=0x1842 dataout=0xd625 | ready=0
+# T=2150 | [TOP] addr_top=5 | rden=1 wren=0 | datain=0x1842 dataout=0xd625 | ready=0
+# T=2170 | [TOP] addr_top=5 | rden=1 wren=0 | datain=0xac5b dataout=0xd625 | ready=0
+# T=2190 | [TOP] addr_top=5 | rden=1 wren=0 | datain=0xac5b dataout=0xd625 | ready=0
+# T=2210 | [TOP] addr_top=5 | rden=0 wren=0 | datain=0xac5b dataout=0xd625 | ready=0
+# T=2230 | [TOP] addr_top=5 | rden=0 wren=0 | datain=0xac5b dataout=0x8280 | ready=0
+# T=2250 | [TOP] addr_top=6 | rden=0 wren=0 | datain=0xac5b dataout=0x8280 | ready=0
+# T=2270 | [TOP] addr_top=6 | rden=1 wren=0 | datain=0xac5b dataout=0x8280 | ready=0
+# T=2290 | [TOP] addr_top=6 | rden=1 wren=0 | datain=0xac5b dataout=0x8280 | ready=0
+# T=2310 | [TOP] addr_top=6 | rden=1 wren=0 | datain=0x4bb8 dataout=0x8280 | ready=0
+# T=2330 | [TOP] addr_top=6 | rden=1 wren=0 | datain=0x4bb8 dataout=0x8280 | ready=0
+# T=2350 | [TOP] addr_top=6 | rden=0 wren=0 | datain=0x4bb8 dataout=0x8280 | ready=0
+# T=2370 | [TOP] addr_top=6 | rden=0 wren=0 | datain=0x4bb8 dataout=0xce38 | ready=0
+# T=2390 | [TOP] addr_top=7 | rden=0 wren=0 | datain=0x4bb8 dataout=0xce38 | ready=0
+# T=2390 | [WRITE] addr=7 | dataout=0xce38 (52792)
+# T=2410 | [TOP] addr_top=7 | rden=0 wren=1 | datain=0x4bb8 dataout=0xce38 | ready=0
+# T=2430 | [TOP] addr_top=7 | rden=0 wren=0 | datain=0x4bb8 dataout=0xce38 | ready=0
+# T=2450 | [TOP] addr_top=7 | rden=0 wren=0 | datain=0x4bb8 dataout=0x0000 | ready=0
+# T=2470 | [TOP] addr_top=7 | rden=0 wren=0 | datain=0x4bb8 dataout=0x0000 | ready=0
+# T=2490 | [TOP] addr_top=8 | rden=0 wren=0 | datain=0x4bb8 dataout=0x0000 | ready=0
+# T=2510 | [TOP] addr_top=8 | rden=1 wren=0 | datain=0x4bb8 dataout=0x0000 | ready=0
+# T=2530 | [TOP] addr_top=8 | rden=1 wren=0 | datain=0x4bb8 dataout=0x0000 | ready=0
+# T=2550 | [TOP] addr_top=8 | rden=1 wren=0 | datain=0x02d8 dataout=0x0000 | ready=0
+# T=2570 | [TOP] addr_top=8 | rden=1 wren=0 | datain=0x02d8 dataout=0x0000 | ready=0
+# T=2590 | [TOP] addr_top=8 | rden=0 wren=0 | datain=0x02d8 dataout=0x0000 | ready=0
+# T=2610 | [TOP] addr_top=8 | rden=0 wren=0 | datain=0x02d8 dataout=0x02d8 | ready=0
+# T=2630 | [TOP] addr_top=9 | rden=0 wren=0 | datain=0x02d8 dataout=0x02d8 | ready=0
+# T=2650 | [TOP] addr_top=9 | rden=1 wren=0 | datain=0x02d8 dataout=0x02d8 | ready=0
+# T=2670 | [TOP] addr_top=9 | rden=1 wren=0 | datain=0x02d8 dataout=0x02d8 | ready=0
+# T=2690 | [TOP] addr_top=9 | rden=1 wren=0 | datain=0x7d0f dataout=0x02d8 | ready=0
+# T=2710 | [TOP] addr_top=9 | rden=1 wren=0 | datain=0x7d0f dataout=0x02d8 | ready=0
+# T=2730 | [TOP] addr_top=9 | rden=0 wren=0 | datain=0x7d0f dataout=0x02d8 | ready=0
+# T=2750 | [TOP] addr_top=9 | rden=0 wren=0 | datain=0x7d0f dataout=0x7fe7 | ready=0
+# T=2770 | [TOP] addr_top=10 | rden=0 wren=0 | datain=0x7d0f dataout=0x7fe7 | ready=0
+# T=2790 | [TOP] addr_top=10 | rden=1 wren=0 | datain=0x7d0f dataout=0x7fe7 | ready=0
+# T=2810 | [TOP] addr_top=10 | rden=1 wren=0 | datain=0x7d0f dataout=0x7fe7 | ready=0
+# T=2830 | [TOP] addr_top=10 | rden=1 wren=0 | datain=0x05b0 dataout=0x7fe7 | ready=0
+# T=2850 | [TOP] addr_top=10 | rden=1 wren=0 | datain=0x05b0 dataout=0x7fe7 | ready=0
+# T=2870 | [TOP] addr_top=10 | rden=0 wren=0 | datain=0x05b0 dataout=0x7fe7 | ready=0
+# T=2890 | [TOP] addr_top=10 | rden=0 wren=0 | datain=0x05b0 dataout=0x8597 | ready=0
+# T=2910 | [TOP] addr_top=11 | rden=0 wren=0 | datain=0x05b0 dataout=0x8597 | ready=0
+# T=2930 | [TOP] addr_top=11 | rden=1 wren=0 | datain=0x05b0 dataout=0x8597 | ready=0
+# T=2950 | [TOP] addr_top=11 | rden=1 wren=0 | datain=0x05b0 dataout=0x8597 | ready=0
+# T=2970 | [TOP] addr_top=11 | rden=1 wren=0 | datain=0xc473 dataout=0x8597 | ready=0
+# T=2990 | [TOP] addr_top=11 | rden=1 wren=0 | datain=0xc473 dataout=0x8597 | ready=0
+# T=3010 | [TOP] addr_top=11 | rden=0 wren=0 | datain=0xc473 dataout=0x8597 | ready=0
+# T=3030 | [TOP] addr_top=11 | rden=0 wren=0 | datain=0xc473 dataout=0x4a0a | ready=0
+# T=3050 | [TOP] addr_top=12 | rden=0 wren=0 | datain=0xc473 dataout=0x4a0a | ready=0
+# T=3070 | [TOP] addr_top=12 | rden=1 wren=0 | datain=0xc473 dataout=0x4a0a | ready=0
+# T=3090 | [TOP] addr_top=12 | rden=1 wren=0 | datain=0xc473 dataout=0x4a0a | ready=0
+# T=3110 | [TOP] addr_top=12 | rden=1 wren=0 | datain=0x221e dataout=0x4a0a | ready=0
+# T=3130 | [TOP] addr_top=12 | rden=1 wren=0 | datain=0x221e dataout=0x4a0a | ready=0
+# T=3150 | [TOP] addr_top=12 | rden=0 wren=0 | datain=0x221e dataout=0x4a0a | ready=0
+# T=3170 | [TOP] addr_top=12 | rden=0 wren=0 | datain=0x221e dataout=0x6c28 | ready=0
+# T=3190 | [TOP] addr_top=13 | rden=0 wren=0 | datain=0x221e dataout=0x6c28 | ready=0
+# T=3210 | [TOP] addr_top=13 | rden=1 wren=0 | datain=0x221e dataout=0x6c28 | ready=0
+# T=3230 | [TOP] addr_top=13 | rden=1 wren=0 | datain=0x221e dataout=0x6c28 | ready=0
+# T=3250 | [TOP] addr_top=13 | rden=1 wren=0 | datain=0x0123 dataout=0x6c28 | ready=0
+# T=3270 | [TOP] addr_top=13 | rden=1 wren=0 | datain=0x0123 dataout=0x6c28 | ready=0
+# T=3290 | [TOP] addr_top=13 | rden=0 wren=0 | datain=0x0123 dataout=0x6c28 | ready=0
+# T=3310 | [TOP] addr_top=13 | rden=0 wren=0 | datain=0x0123 dataout=0x6d4b | ready=0
+# T=3330 | [TOP] addr_top=14 | rden=0 wren=0 | datain=0x0123 dataout=0x6d4b | ready=0
+# T=3350 | [TOP] addr_top=14 | rden=1 wren=0 | datain=0x0123 dataout=0x6d4b | ready=0
+# T=3370 | [TOP] addr_top=14 | rden=1 wren=0 | datain=0x0123 dataout=0x6d4b | ready=0
+# T=3390 | [TOP] addr_top=14 | rden=1 wren=0 | datain=0x8f04 dataout=0x6d4b | ready=0
+# T=3410 | [TOP] addr_top=14 | rden=1 wren=0 | datain=0x8f04 dataout=0x6d4b | ready=0
+# T=3430 | [TOP] addr_top=14 | rden=0 wren=0 | datain=0x8f04 dataout=0x6d4b | ready=0
+# T=3450 | [TOP] addr_top=14 | rden=0 wren=0 | datain=0x8f04 dataout=0xfc4f | ready=0
+# T=3470 | [TOP] addr_top=15 | rden=0 wren=0 | datain=0x8f04 dataout=0xfc4f | ready=0
+# T=3470 | [WRITE] addr=15 | dataout=0xfc4f (64591)
+# T=3490 | [TOP] addr_top=15 | rden=0 wren=1 | datain=0x8f04 dataout=0xfc4f | ready=0
+# T=3510 | [TOP] addr_top=15 | rden=0 wren=0 | datain=0x8f04 dataout=0xfc4f | ready=0
+# T=3530 | [TOP] addr_top=15 | rden=0 wren=0 | datain=0x8f04 dataout=0x0000 | ready=0
+# T=3550 | [TOP] addr_top=15 | rden=0 wren=0 | datain=0x8f04 dataout=0x0000 | ready=0
+# T=3570 | [TOP] addr_top=16 | rden=0 wren=0 | datain=0x8f04 dataout=0x0000 | ready=0
+# T=3590 | [TOP] addr_top=16 | rden=1 wren=0 | datain=0x8f04 dataout=0x0000 | ready=0
+# T=3610 | [TOP] addr_top=16 | rden=1 wren=0 | datain=0x8f04 dataout=0x0000 | ready=0
+# T=3630 | [TOP] addr_top=16 | rden=1 wren=0 | datain=0x3c48 dataout=0x0000 | ready=0
+# T=3650 | [TOP] addr_top=16 | rden=1 wren=0 | datain=0x3c48 dataout=0x0000 | ready=0
+# T=3670 | [TOP] addr_top=16 | rden=0 wren=0 | datain=0x3c48 dataout=0x0000 | ready=0
+# T=3690 | [TOP] addr_top=16 | rden=0 wren=0 | datain=0x3c48 dataout=0x3c48 | ready=0
+# T=3710 | [TOP] addr_top=17 | rden=0 wren=0 | datain=0x3c48 dataout=0x3c48 | ready=0
+# T=3730 | [TOP] addr_top=17 | rden=1 wren=0 | datain=0x3c48 dataout=0x3c48 | ready=0
+# T=3750 | [TOP] addr_top=17 | rden=1 wren=0 | datain=0x3c48 dataout=0x3c48 | ready=0
+# T=3770 | [TOP] addr_top=17 | rden=1 wren=0 | datain=0x0264 dataout=0x3c48 | ready=0
+# T=3790 | [TOP] addr_top=17 | rden=1 wren=0 | datain=0x0264 dataout=0x3c48 | ready=0
+# T=3810 | [TOP] addr_top=17 | rden=0 wren=0 | datain=0x0264 dataout=0x3c48 | ready=0
+# T=3830 | [TOP] addr_top=17 | rden=0 wren=0 | datain=0x0264 dataout=0x3eac | ready=0
+# T=3850 | [TOP] addr_top=18 | rden=0 wren=0 | datain=0x0264 dataout=0x3eac | ready=0
+# T=3870 | [TOP] addr_top=18 | rden=1 wren=0 | datain=0x0264 dataout=0x3eac | ready=0
+# T=3890 | [TOP] addr_top=18 | rden=1 wren=0 | datain=0x0264 dataout=0x3eac | ready=0
+# T=3910 | [TOP] addr_top=18 | rden=1 wren=0 | datain=0xbf50 dataout=0x3eac | ready=0
+# T=3930 | [TOP] addr_top=18 | rden=1 wren=0 | datain=0xbf50 dataout=0x3eac | ready=0
+# T=3950 | [TOP] addr_top=18 | rden=0 wren=0 | datain=0xbf50 dataout=0x3eac | ready=0
+# T=3970 | [TOP] addr_top=18 | rden=0 wren=0 | datain=0xbf50 dataout=0xfdfc | ready=0
+# T=3990 | [TOP] addr_top=19 | rden=0 wren=0 | datain=0xbf50 dataout=0xfdfc | ready=0
+# T=4010 | [TOP] addr_top=19 | rden=1 wren=0 | datain=0xbf50 dataout=0xfdfc | ready=0
+# T=4030 | [TOP] addr_top=19 | rden=1 wren=0 | datain=0xbf50 dataout=0xfdfc | ready=0
+# T=4050 | [TOP] addr_top=19 | rden=1 wren=0 | datain=0x1e84 dataout=0xfdfc | ready=0
+# T=4070 | [TOP] addr_top=19 | rden=1 wren=0 | datain=0x1e84 dataout=0xfdfc | ready=0
+# T=4090 | [TOP] addr_top=19 | rden=0 wren=0 | datain=0x1e84 dataout=0xfdfc | ready=0
+# T=4110 | [TOP] addr_top=19 | rden=0 wren=0 | datain=0x1e84 dataout=0x1c80 | ready=0
+# T=4130 | [TOP] addr_top=20 | rden=0 wren=0 | datain=0x1e84 dataout=0x1c80 | ready=0
+# T=4150 | [TOP] addr_top=20 | rden=1 wren=0 | datain=0x1e84 dataout=0x1c80 | ready=0
+# T=4170 | [TOP] addr_top=20 | rden=1 wren=0 | datain=0x1e84 dataout=0x1c80 | ready=0
+# T=4190 | [TOP] addr_top=20 | rden=1 wren=0 | datain=0x00f5 dataout=0x1c80 | ready=0
+# T=4210 | [TOP] addr_top=20 | rden=1 wren=0 | datain=0x00f5 dataout=0x1c80 | ready=0
+# T=4230 | [TOP] addr_top=20 | rden=0 wren=0 | datain=0x00f5 dataout=0x1c80 | ready=0
+# T=4250 | [TOP] addr_top=20 | rden=0 wren=0 | datain=0x00f5 dataout=0x1d75 | ready=0
+# T=4270 | [TOP] addr_top=21 | rden=0 wren=0 | datain=0x00f5 dataout=0x1d75 | ready=0
+# T=4290 | [TOP] addr_top=21 | rden=1 wren=0 | datain=0x00f5 dataout=0x1d75 | ready=0
+# T=4310 | [TOP] addr_top=21 | rden=1 wren=0 | datain=0x00f5 dataout=0x1d75 | ready=0
+# T=4330 | [TOP] addr_top=21 | rden=1 wren=0 | datain=0x7ff8 dataout=0x1d75 | ready=0
+# T=4350 | [TOP] addr_top=21 | rden=1 wren=0 | datain=0x7ff8 dataout=0x1d75 | ready=0
+# T=4370 | [TOP] addr_top=21 | rden=0 wren=0 | datain=0x7ff8 dataout=0x1d75 | ready=0
+# T=4390 | [TOP] addr_top=21 | rden=0 wren=0 | datain=0x7ff8 dataout=0x9d6d | ready=0
+# T=4410 | [TOP] addr_top=22 | rden=0 wren=0 | datain=0x7ff8 dataout=0x9d6d | ready=0
+# T=4430 | [TOP] addr_top=22 | rden=1 wren=0 | datain=0x7ff8 dataout=0x9d6d | ready=0
+# T=4450 | [TOP] addr_top=22 | rden=1 wren=0 | datain=0x7ff8 dataout=0x9d6d | ready=0
+# T=4470 | [TOP] addr_top=22 | rden=1 wren=0 | datain=0x0415 dataout=0x9d6d | ready=0
+# T=4490 | [TOP] addr_top=22 | rden=1 wren=0 | datain=0x0415 dataout=0x9d6d | ready=0
+# T=4510 | [TOP] addr_top=22 | rden=0 wren=0 | datain=0x0415 dataout=0x9d6d | ready=0
+# T=4530 | [TOP] addr_top=22 | rden=0 wren=0 | datain=0x0415 dataout=0xa182 | ready=0
+# T=4550 | [TOP] addr_top=23 | rden=0 wren=0 | datain=0x0415 dataout=0xa182 | ready=0
+# T=4550 | [WRITE] addr=23 | dataout=0xa182 (41346)
+# T=4570 | [TOP] addr_top=23 | rden=0 wren=1 | datain=0x0415 dataout=0xa182 | ready=0
+# T=4590 | [TOP] addr_top=23 | rden=0 wren=0 | datain=0x0415 dataout=0xa182 | ready=0
+# T=4610 | [TOP] addr_top=23 | rden=0 wren=0 | datain=0x0415 dataout=0x0000 | ready=0
+# T=4630 | [TOP] addr_top=23 | rden=0 wren=0 | datain=0x0415 dataout=0x0000 | ready=0
+# T=4650 | [TOP] addr_top=24 | rden=0 wren=0 | datain=0x0415 dataout=0x0000 | ready=0
+# T=4670 | [TOP] addr_top=24 | rden=1 wren=0 | datain=0x0415 dataout=0x0000 | ready=0
+# T=4690 | [TOP] addr_top=24 | rden=1 wren=0 | datain=0x0415 dataout=0x0000 | ready=0
+# T=4710 | [TOP] addr_top=24 | rden=1 wren=0 | datain=0x55e3 dataout=0x0000 | ready=0
+# T=4730 | [TOP] addr_top=24 | rden=1 wren=0 | datain=0x55e3 dataout=0x0000 | ready=0
+# T=4750 | [TOP] addr_top=24 | rden=0 wren=0 | datain=0x55e3 dataout=0x0000 | ready=0
+# T=4770 | [TOP] addr_top=24 | rden=0 wren=0 | datain=0x55e3 dataout=0x55e3 | ready=0
+# T=4790 | [TOP] addr_top=25 | rden=0 wren=0 | datain=0x55e3 dataout=0x55e3 | ready=0
+# T=4810 | [TOP] addr_top=25 | rden=1 wren=0 | datain=0x55e3 dataout=0x55e3 | ready=0
+# T=4830 | [TOP] addr_top=25 | rden=1 wren=0 | datain=0x55e3 dataout=0x55e3 | ready=0
+# T=4850 | [TOP] addr_top=25 | rden=1 wren=0 | datain=0x0185 dataout=0x55e3 | ready=0
+# T=4870 | [TOP] addr_top=25 | rden=1 wren=0 | datain=0x0185 dataout=0x55e3 | ready=0
+# T=4890 | [TOP] addr_top=25 | rden=0 wren=0 | datain=0x0185 dataout=0x55e3 | ready=0
+# T=4910 | [TOP] addr_top=25 | rden=0 wren=0 | datain=0x0185 dataout=0x5768 | ready=0
+# T=4930 | [TOP] addr_top=26 | rden=0 wren=0 | datain=0x0185 dataout=0x5768 | ready=0
+# T=4950 | [TOP] addr_top=26 | rden=1 wren=0 | datain=0x0185 dataout=0x5768 | ready=0
+# T=4970 | [TOP] addr_top=26 | rden=1 wren=0 | datain=0x0185 dataout=0x5768 | ready=0
+# T=4990 | [TOP] addr_top=26 | rden=1 wren=0 | datain=0xb7a4 dataout=0x5768 | ready=0
+# T=5010 | [TOP] addr_top=26 | rden=1 wren=0 | datain=0xb7a4 dataout=0x5768 | ready=0
+# T=5030 | [TOP] addr_top=26 | rden=0 wren=0 | datain=0xb7a4 dataout=0x5768 | ready=0
+# T=5050 | [TOP] addr_top=26 | rden=0 wren=0 | datain=0xb7a4 dataout=0x0f0c | ready=0
+# T=5070 | [TOP] addr_top=27 | rden=0 wren=0 | datain=0xb7a4 dataout=0x0f0c | ready=0
+# T=5090 | [TOP] addr_top=27 | rden=1 wren=0 | datain=0xb7a4 dataout=0x0f0c | ready=0
+# T=5110 | [TOP] addr_top=27 | rden=1 wren=0 | datain=0xb7a4 dataout=0x0f0c | ready=0
+# T=5130 | [TOP] addr_top=27 | rden=1 wren=0 | datain=0x240f dataout=0x0f0c | ready=0
+# T=5150 | [TOP] addr_top=27 | rden=1 wren=0 | datain=0x240f dataout=0x0f0c | ready=0
+# T=5170 | [TOP] addr_top=27 | rden=0 wren=0 | datain=0x240f dataout=0x0f0c | ready=0
+# T=5190 | [TOP] addr_top=27 | rden=0 wren=0 | datain=0x240f dataout=0x331b | ready=0
+# T=5210 | [TOP] addr_top=28 | rden=0 wren=0 | datain=0x240f dataout=0x331b | ready=0
+# T=5230 | [TOP] addr_top=28 | rden=1 wren=0 | datain=0x240f dataout=0x331b | ready=0
+# T=5250 | [TOP] addr_top=28 | rden=1 wren=0 | datain=0x240f dataout=0x331b | ready=0
+# T=5270 | [TOP] addr_top=28 | rden=1 wren=0 | datain=0x009e dataout=0x331b | ready=0
+# T=5290 | [TOP] addr_top=28 | rden=1 wren=0 | datain=0x009e dataout=0x331b | ready=0
+# T=5310 | [TOP] addr_top=28 | rden=0 wren=0 | datain=0x009e dataout=0x331b | ready=0
+# T=5330 | [TOP] addr_top=28 | rden=0 wren=0 | datain=0x009e dataout=0x33b9 | ready=0
+# T=5350 | [TOP] addr_top=29 | rden=0 wren=0 | datain=0x009e dataout=0x33b9 | ready=0
+# T=5370 | [TOP] addr_top=29 | rden=1 wren=0 | datain=0x009e dataout=0x33b9 | ready=0
+# T=5390 | [TOP] addr_top=29 | rden=1 wren=0 | datain=0x009e dataout=0x33b9 | ready=0
+# T=5410 | [TOP] addr_top=29 | rden=1 wren=0 | datain=0xc822 dataout=0x33b9 | ready=0
+# T=5430 | [TOP] addr_top=29 | rden=1 wren=0 | datain=0xc822 dataout=0x33b9 | ready=0
+# T=5450 | [TOP] addr_top=29 | rden=0 wren=0 | datain=0xc822 dataout=0x33b9 | ready=0
+# T=5470 | [TOP] addr_top=29 | rden=0 wren=0 | datain=0xc822 dataout=0xfbdb | ready=0
+# T=5490 | [TOP] addr_top=30 | rden=0 wren=0 | datain=0xc822 dataout=0xfbdb | ready=0
+# T=5510 | [TOP] addr_top=30 | rden=1 wren=0 | datain=0xc822 dataout=0xfbdb | ready=0
+# T=5530 | [TOP] addr_top=30 | rden=1 wren=0 | datain=0xc822 dataout=0xfbdb | ready=0
+# T=5550 | [TOP] addr_top=30 | rden=1 wren=0 | datain=0x1901 dataout=0xfbdb | ready=0
+# T=5570 | [TOP] addr_top=30 | rden=1 wren=0 | datain=0x1901 dataout=0xfbdb | ready=0
+# T=5590 | [TOP] addr_top=30 | rden=0 wren=0 | datain=0x1901 dataout=0xfbdb | ready=0
+# T=5610 | [TOP] addr_top=30 | rden=0 wren=0 | datain=0x1901 dataout=0x14dc | ready=0
+# T=5630 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x1901 dataout=0x14dc | ready=0
+# T=5630 | [WRITE] addr=31 | dataout=0x14dc (5340)
+# T=5650 | [TOP] addr_top=31 | rden=0 wren=1 | datain=0x1901 dataout=0x14dc | ready=0
+# T=5670 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x1901 dataout=0x14dc | ready=0
+# T=5690 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x1901 dataout=0x0000 | ready=0
 # T=5690 | READY=1 (fim). Simulacao OK. Parando com $stop.
-# T=5710 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x2e67 dataout=0x0000 | ready=1
-# T=5730 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x2e67 dataout=0x0000 | ready=0
-# T=5750 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x2e67 dataout=0x0000 | ready=0
-# T=5770 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x2e67 dataout=0x0000 | ready=0
-# T=5790 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x2e67 dataout=0x0000 | ready=0
-# T=5810 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x05eb dataout=0x0000 | ready=0
-# T=5830 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x05eb dataout=0x0000 | ready=0
-# T=5850 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x05eb dataout=0x0000 | ready=0
-# T=5870 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x05eb dataout=0x05eb | ready=0
+# T=5710 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x1901 dataout=0x0000 | ready=1
+# T=5730 | [TOP] addr_top=31 | rden=0 wren=0 | datain=0x1901 dataout=0x0000 | ready=0
+# T=5750 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x1901 dataout=0x0000 | ready=0
+# T=5770 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x1901 dataout=0x0000 | ready=0
+# T=5790 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x1901 dataout=0x0000 | ready=0
+# T=5810 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x12d5 dataout=0x0000 | ready=0
+# T=5830 | [TOP] addr_top=0 | rden=1 wren=0 | datain=0x12d5 dataout=0x0000 | ready=0
+# T=5850 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x12d5 dataout=0x0000 | ready=0
+# T=5870 | [TOP] addr_top=0 | rden=0 wren=0 | datain=0x12d5 dataout=0x12d5 | ready=0
 # ** Note: $stop    : C:/ENGG56/Somador/tb_TOP.v(164)
 #    Time: 5890 ns  Iteration: 0  Instance: /TOP_TB
 # Break in Module TOP_TB at C:/ENGG56/Somador/tb_TOP.v line 164
-# End time: 07:07:26 on Dec 27,2025, Elapsed time: 0:08:12
+# End time: 23:06:37 on Dec 27,2025, Elapsed time: 0:03:35
 # Errors: 0, Warnings: 0
