@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Dec 28 17:09:24 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : FSM_Control
+Top-level Entity Name : FSM_Control
+Family : Cyclone IV E
+Total logic elements : 49
+    Total combinational functions : 44
+    Dedicated logic registers : 27
+Total registers : 27
+Total pins : 25
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

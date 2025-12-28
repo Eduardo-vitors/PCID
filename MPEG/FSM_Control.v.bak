@@ -1,0 +1,145 @@
+module FSM_Control_Q3 (
+    input  wire        clk,
+    input  wire        rst,      // reset ativo em 1
+    input  wire        start,
+
+    // SRAM
+    output reg  [5:0]  address,  // 0..63 = {u,v}
+    output reg         rd_en,     // pulso de leitura (1 ciclo)
+    input  wire [11:0] data_out,  // F(u,v) (vem 1 clk depois do rd_en)
+
+    // índices
+    output reg  [2:0]  x, y, u, v,
+
+    // MAC
+    output reg         act_mac,   // habilita MAC
+    output reg         acc,       // “consumir/ acumular” data_out neste ciclo
+
+    // status
+    output reg         ready,
+    output reg         rst_out     // reset interno (opcional)
+);
+
+    // Estados (bem direto)
+    localparam S_IDLE   = 3'd0; // espera start
+    localparam S_ADDR   = 3'd1; // coloca address
+    localparam S_RD     = 3'd2; // pulso rd_en=1
+    localparam S_WAIT   = 3'd3; // espera 1 clk (memória)
+    localparam S_MAC    = 3'd4; // usa data_out no MAC
+    localparam S_GAP    = 3'd5; // gap 1 clk (pode trocar address)
+    localparam S_DONE   = 3'd6; // ready 1 clk
+
+    reg [2:0] state;
+
+    wire last_v = (v == 3'd7);
+    wire last_u = (u == 3'd7);
+    wire last_y = (y == 3'd7);
+    wire last_x = (x == 3'd7);
+    wire last_all = last_v & last_u & last_y & last_x;
+
+    // address = u*8 + v
+    wire [5:0] addr_uv = {u, v};
+
+    // Avança v,u,y,x em cascata (como 4 for)
+    task advance_indices;
+    begin
+        if (!last_v) begin
+            v <= v + 3'd1;
+        end else begin
+            v <= 3'd0;
+            if (!last_u) begin
+                u <= u + 3'd1;
+            end else begin
+                u <= 3'd0;
+                if (!last_y) begin
+                    y <= y + 3'd1;
+                end else begin
+                    y <= 3'd0;
+                    if (!last_x) begin
+                        x <= x + 3'd1;
+                    end
+                end
+            end
+        end
+    end
+    endtask
+
+    always @(posedge clk) begin
+        if (rst) begin
+            state   <= S_IDLE;
+
+            x <= 3'd0; y <= 3'd0; u <= 3'd0; v <= 3'd0;
+            address <= 6'd0;
+
+            rd_en   <= 1'b0;
+            act_mac <= 1'b0;
+            acc     <= 1'b0;
+            ready   <= 1'b0;
+
+            rst_out <= 1'b0;
+        end else begin
+            // defaults (por ciclo)
+            rd_en   <= 1'b0;
+            act_mac <= 1'b0;
+            acc     <= 1'b0;
+            ready   <= 1'b0;
+
+            // rst_out: fica 1 durante execução; 0 só no idle (opcional)
+            rst_out <= (state == S_IDLE) ? 1'b0 : 1'b1;
+
+            case (state)
+                S_IDLE: begin
+                    // espera start
+                    if (start) begin
+                        x <= 0; y <= 0; u <= 0; v <= 0;
+                        state <= S_ADDR;
+                    end
+                end
+
+                S_ADDR: begin
+                    // 1) coloca endereço (rd_en ainda 0)
+                    address <= addr_uv;
+                    state   <= S_RD;
+                end
+
+                S_RD: begin
+                    // 2) pulso de leitura
+                    rd_en <= 1'b1;
+                    state <= S_WAIT;
+                end
+
+                S_WAIT: begin
+                    // 3) espera 1 clock para data_out ficar válido
+                    state <= S_MAC;
+                end
+
+                S_MAC: begin
+                    // 4) data_out válido -> MAC usa/acumula
+                    act_mac <= 1'b1;
+                    acc     <= 1'b1;
+
+                    if (last_all) begin
+                        state <= S_DONE;
+                    end else begin
+                        advance_indices(); // prepara próximo u,v,x,y
+                        state <= S_GAP;
+                    end
+                end
+
+                S_GAP: begin
+                    // 5) gap obrigatório antes de trocar address
+                    state <= S_ADDR;
+                end
+
+                S_DONE: begin
+                    // 6) terminou tudo
+                    ready <= 1'b1;   // 1 ciclo
+                    state <= S_IDLE;
+                end
+
+                default: state <= S_IDLE;
+            endcase
+        end
+    end
+
+endmodule
