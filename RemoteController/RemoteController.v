@@ -4,11 +4,11 @@ module RemoteController (
     input wire Clock,
     input wire Reset_In,
     input wire Serial,
-    output reg [31:0] dados_brutos,
     output reg [7:0] Tecla,
     output reg Ready
 );
 
+    reg [31:0] dados_brutos;
     localparam ESTADO_ESPERA    = 2'd0;
     localparam ESTADO_RECEBENDO = 2'd1;
     localparam ESTADO_ENDPOINT  = 2'd2;

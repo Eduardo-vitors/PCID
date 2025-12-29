@@ -21,7 +21,7 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 232 128)
+	(rect 16 16 200 128)
 	(text "RemoteController" (rect 5 0 75 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -46,27 +46,20 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
-		(pt 216 32)
-		(output)
-		(text "dados_brutos[31..0]" (rect 0 0 77 12)(font "Arial" ))
-		(text "dados_brutos[31..0]" (rect 118 27 195 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
-	)
-	(port
-		(pt 216 48)
+		(pt 184 32)
 		(output)
 		(text "Tecla[7..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "Tecla[7..0]" (rect 154 43 195 55)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48)(line_width 3))
+		(text "Tecla[7..0]" (rect 122 27 163 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(port
-		(pt 216 64)
+		(pt 184 48)
 		(output)
 		(text "Ready" (rect 0 0 28 12)(font "Arial" ))
-		(text "Ready" (rect 167 59 195 71)(font "Arial" ))
-		(line (pt 216 64)(pt 200 64)(line_width 1))
+		(text "Ready" (rect 135 43 163 55)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48)(line_width 1))
 	)
 	(drawing
-		(rectangle (rect 16 16 200 96)(line_width 1))
+		(rectangle (rect 16 16 168 96)(line_width 1))
 	)
 )
