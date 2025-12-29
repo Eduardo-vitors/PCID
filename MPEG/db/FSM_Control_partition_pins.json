@@ -4,103 +4,103 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "ready",
+					"name" : "LEDG[3]",
 					"strict" : false
 				},
 				{
-					"name" : "u[0]",
+					"name" : "LEDG[2]",
 					"strict" : false
 				},
 				{
-					"name" : "u[1]",
+					"name" : "LEDG[1]",
 					"strict" : false
 				},
 				{
-					"name" : "u[2]",
+					"name" : "LEDG[0]",
 					"strict" : false
 				},
 				{
-					"name" : "v[0]",
+					"name" : "LEDR[17]",
 					"strict" : false
 				},
 				{
-					"name" : "v[1]",
+					"name" : "LEDR[16]",
 					"strict" : false
 				},
 				{
-					"name" : "v[2]",
+					"name" : "LEDR[15]",
 					"strict" : false
 				},
 				{
-					"name" : "x[0]",
+					"name" : "LEDR[14]",
 					"strict" : false
 				},
 				{
-					"name" : "x[1]",
+					"name" : "LEDR[13]",
 					"strict" : false
 				},
 				{
-					"name" : "x[2]",
+					"name" : "LEDR[12]",
 					"strict" : false
 				},
 				{
-					"name" : "y[0]",
+					"name" : "LEDR[11]",
 					"strict" : false
 				},
 				{
-					"name" : "y[1]",
+					"name" : "LEDR[10]",
 					"strict" : false
 				},
 				{
-					"name" : "y[2]",
+					"name" : "LEDR[9]",
 					"strict" : false
 				},
 				{
-					"name" : "act_mac",
+					"name" : "LEDR[8]",
 					"strict" : false
 				},
 				{
-					"name" : "rd_en",
+					"name" : "LEDR[7]",
 					"strict" : false
 				},
 				{
-					"name" : "address[0]",
+					"name" : "LEDR[6]",
 					"strict" : false
 				},
 				{
-					"name" : "address[1]",
+					"name" : "LEDR[5]",
 					"strict" : false
 				},
 				{
-					"name" : "address[2]",
+					"name" : "LEDR[4]",
 					"strict" : false
 				},
 				{
-					"name" : "address[3]",
+					"name" : "LEDR[3]",
 					"strict" : false
 				},
 				{
-					"name" : "address[4]",
+					"name" : "LEDR[2]",
 					"strict" : false
 				},
 				{
-					"name" : "address[5]",
+					"name" : "LEDR[1]",
 					"strict" : false
 				},
 				{
-					"name" : "rst_out",
+					"name" : "LEDR[0]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rst_in",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
-					"name" : "start",
+					"name" : "SW[1]",
 					"strict" : false
 				}
 			]

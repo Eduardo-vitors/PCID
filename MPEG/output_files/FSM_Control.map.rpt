@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FSM_Control
-Sun Dec 28 17:09:24 2025
+Mon Dec 29 16:11:17 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |FSM_Control|state
+  8. State Machine - |FSM_Control2|FSM_Control:inst|state
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -46,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec 28 17:09:24 2025       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 29 16:11:17 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; FSM_Control                                 ;
-; Top-level Entity Name              ; FSM_Control                                 ;
+; Top-level Entity Name              ; FSM_Control2                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 49                                          ;
-;     Total combinational functions  ; 44                                          ;
+; Total logic elements               ; 50                                          ;
+;     Total combinational functions  ; 45                                          ;
 ;     Dedicated logic registers      ; 27                                          ;
 ; Total registers                    ; 27                                          ;
 ; Total pins                         ; 25                                          ;
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; FSM_Control        ; FSM_Control        ;
+; Top-level entity name                                            ; FSM_Control2       ; FSM_Control        ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -166,60 +166,62 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                               ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
-; FSM_Control.v                    ; yes             ; User Verilog HDL File  ; C:/ENGG56/MPEG/FSM_Control.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------------------+---------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path    ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------+---------+
+; FSM_Control.v                    ; yes             ; User Verilog HDL File              ; C:/ENGG56/MPEG/FSM_Control.v    ;         ;
+; FSM_Control2.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/ENGG56/MPEG/FSM_Control2.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 49        ;
-;                                             ;           ;
-; Total combinational functions               ; 44        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 29        ;
-;     -- 3 input functions                    ; 13        ;
-;     -- <=2 input functions                  ; 2         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 44        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 27        ;
-;     -- Dedicated logic registers            ; 27        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 25        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 287       ;
-; Average fan-out                             ; 2.37      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 50             ;
+;                                             ;                ;
+; Total combinational functions               ; 45             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 28             ;
+;     -- 3 input functions                    ; 15             ;
+;     -- <=2 input functions                  ; 2              ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 45             ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 27             ;
+;     -- Dedicated logic registers            ; 27             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 25             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 27             ;
+; Total fan-out                               ; 289            ;
+; Average fan-out                             ; 2.37           ;
++---------------------------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |FSM_Control               ; 44 (44)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |FSM_Control        ; FSM_Control ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+--------------+
+; |FSM_Control2              ; 45 (0)              ; 27 (0)                    ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |FSM_Control2                  ; FSM_Control2 ; work         ;
+;    |FSM_Control:inst|      ; 45 (45)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM_Control2|FSM_Control:inst ; FSM_Control  ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |FSM_Control|state                                                                                                              ;
+; State Machine - |FSM_Control2|FSM_Control:inst|state                                                                                            ;
 +----------------+------------+-----------+-------------+----------------+----------------+----------------+------------+------------+------------+
 ; Name           ; state.NEXT ; state.GAP ; state.ACCUM ; state.WAIT_MEM ; state.RD_PULSE ; state.SET_ADDR ; state.INIT ; state.IDLE ; state.DONE ;
 +----------------+------------+-----------+-------------+----------------+----------------+----------------+------------+------------+------------+
@@ -240,9 +242,9 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; state~4                               ; Lost fanout        ;
-; state~5                               ; Lost fanout        ;
-; state~6                               ; Lost fanout        ;
+; FSM_Control:inst|state~4              ; Lost fanout        ;
+; FSM_Control:inst|state~5              ; Lost fanout        ;
+; FSM_Control:inst|state~6              ; Lost fanout        ;
 ; Total Number of Removed Registers = 3 ;                    ;
 +---------------------------------------+--------------------+
 
@@ -262,16 +264,16 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |FSM_Control|v             ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FSM_Control|u             ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FSM_Control|x             ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FSM_Control|y             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FSM_Control2|FSM_Control:inst|y ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FSM_Control2|FSM_Control:inst|x ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |FSM_Control2|FSM_Control:inst|v ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FSM_Control2|FSM_Control:inst|u ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +-----------------------------------------------------+
@@ -282,15 +284,15 @@ Encoding Type:  One-Hot
 ; boundary_port         ; 25                          ;
 ; cycloneiii_ff         ; 27                          ;
 ;     CLR               ; 27                          ;
-; cycloneiii_lcell_comb ; 45                          ;
-;     normal            ; 45                          ;
+; cycloneiii_lcell_comb ; 46                          ;
+;     normal            ; 46                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 2                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 29                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 28                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.63                        ;
+; Average LUT depth     ; 2.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -309,7 +311,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Dec 28 17:09:18 2025
+    Info: Processing started: Mon Dec 29 16:11:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM_Control -c FSM_Control
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -319,20 +321,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file tb_fsm_
     Info (12023): Found entity 1: FSM_Control_TB File: C:/ENGG56/MPEG/tb_FSM_Control.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_control2.bdf
     Info (12023): Found entity 1: FSM_Control2
-Info (12127): Elaborating entity "FSM_Control" for the top level hierarchy
+Info (12127): Elaborating entity "FSM_Control2" for the top level hierarchy
+Info (12128): Elaborating entity "FSM_Control" for hierarchy "FSM_Control:inst"
 Info (10264): Verilog HDL Case Statement information at FSM_Control.v(94): all case item expressions in this case statement are onehot File: C:/ENGG56/MPEG/FSM_Control.v Line: 94
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 49 logic cells
+    Info (21061): Implemented 50 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Sun Dec 28 17:09:24 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Mon Dec 29 16:11:17 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 

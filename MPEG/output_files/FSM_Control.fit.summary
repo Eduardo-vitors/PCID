@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Dec 28 17:09:32 2025
+Fitter Status : Successful - Mon Dec 29 16:11:25 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : FSM_Control
-Top-level Entity Name : FSM_Control
+Top-level Entity Name : FSM_Control2
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 49 / 114,480 ( < 1 % )
-    Total combinational functions : 44 / 114,480 ( < 1 % )
+Total logic elements : 50 / 114,480 ( < 1 % )
+    Total combinational functions : 45 / 114,480 ( < 1 % )
     Dedicated logic registers : 27 / 114,480 ( < 1 % )
 Total registers : 49
 Total pins : 25 / 529 ( 5 % )
