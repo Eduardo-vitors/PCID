@@ -67,6 +67,8 @@ module RemoteController (
                     if (dados_brutos[15:8] == ~dados_brutos[7:0]) begin
                         Tecla <= dados_brutos[15:8];
                         Ready <= 1;
+
+			$display("Ready:%b",Ready);
                     end else begin
                         Ready <= 0;
                     end

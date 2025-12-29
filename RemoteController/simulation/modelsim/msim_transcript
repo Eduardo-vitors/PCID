@@ -1,0 +1,337 @@
+# Reading pref.tcl
+# do RemoteController_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/ENGG56/RemoteController {C:/ENGG56/RemoteController/RemoteController.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:41:02 on Dec 28,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/RemoteController" C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 21:41:03 on Dec 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:41:40 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 21:41:40 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:41:40 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v 
+# -- Compiling module tb_RemoteController_ManualCheck
+# 
+# Top level modules:
+# 	tb_RemoteController_ManualCheck
+# End time: 21:41:40 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Load canceled
+vsim -gui -l msim_transcript work.tb_RemoteController_ManualCheck
+# vsim -gui -l msim_transcript work.tb_RemoteController_ManualCheck 
+# Start time: 21:42:06 on Dec 28,2025
+# Loading work.tb_RemoteController_ManualCheck
+# Loading work.RemoteController
+add wave -position insertpoint  \
+sim:/tb_RemoteController_ManualCheck/dados_brutos
+add wave -position insertpoint  \
+sim:/tb_RemoteController_ManualCheck/Tecla
+add wave -position insertpoint  \
+sim:/tb_RemoteController_ManualCheck/Serial
+# Can't move the Now cursor.
+add wave -position end  sim:/tb_RemoteController_ManualCheck/Clock_RX_38k
+add wave -position end  sim:/tb_RemoteController_ManualCheck/Clock_TX_38k
+add wave -position end  sim:/tb_RemoteController_ManualCheck/Ready
+run -all
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reaÃ§Ã£o do hardware...
+# 
+# >>> TIMEOUT (Ready nao subiu) <<<
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(140)
+#    Time: 1652560 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 140
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:57:13 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 21:57:13 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:57:13 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v 
+# -- Compiling module tb_RemoteController_ManualCheck
+# 
+# Top level modules:
+# 	tb_RemoteController_ManualCheck
+# End time: 21:57:13 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Break key hit
+restart -f
+# Loading work.tb_RemoteController_ManualCheck
+# Loading work.RemoteController
+# Load canceled
+run -all
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reaÃ§Ã£o do hardware...
+# aqui
+# 
+# >>> TIMEOUT (Ready nao subiu) <<<
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(140)
+#    Time: 1652560 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 140
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:58:25 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 21:58:25 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:58:25 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v 
+# -- Compiling module tb_RemoteController_ManualCheck
+# 
+# Top level modules:
+# 	tb_RemoteController_ManualCheck
+# End time: 21:58:25 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Break key hit
+restart -f
+# Loading work.tb_RemoteController_ManualCheck
+# Loading work.RemoteController
+run -all
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reaÃ§Ã£o do hardware...
+# Ready:0
+# 
+# >>> TIMEOUT (Ready nao subiu) <<<
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(140)
+#    Time: 1652560 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 140
+# WARNING: No extended dataflow license exists
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:03:36 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 22:03:36 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:03:36 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v 
+# -- Compiling module tb_RemoteController_ManualCheck
+# 
+# Top level modules:
+# 	tb_RemoteController_ManualCheck
+# End time: 22:03:36 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Break key hit
+restart -f
+# Loading work.tb_RemoteController_ManualCheck
+# Loading work.RemoteController
+run -all
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reaÃ§Ã£o do hardware...
+# Ready:0
+# 
+# >>> READY DETECTADO! <<<
+# Dados Hex: 000010ef (Tecla: 10)
+# INTEGRIDADE: OK (Checksum valido).
+# IDENTIFICACAO: Tecla C
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(140)
+#    Time: 1110100 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 140
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:05:07 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 22:05:07 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:05:08 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v 
+# -- Compiling module tb_RemoteController_ManualCheck
+# 
+# Top level modules:
+# 	tb_RemoteController_ManualCheck
+# End time: 22:05:08 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Break key hit
+restart -f
+# Loading work.tb_RemoteController_ManualCheck
+# Loading work.RemoteController
+run -all
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reaÃ§Ã£o do hardware...
+# Ready:0
+# 
+# >>> READY DETECTADO! <<<
+# Dados Hex: 000010ef (Tecla: 10)
+# INTEGRIDADE: OK (Checksum valido).
+# IDENTIFICACAO: Tecla C
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(140)
+#    Time: 1110100 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 140
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:07:31 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 22:07:31 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:07:31 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v 
+# -- Compiling module tb_RemoteController_ManualCheck
+# 
+# Top level modules:
+# 	tb_RemoteController_ManualCheck
+# End time: 22:07:31 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Break key hit
+restart -f
+# Loading work.tb_RemoteController_ManualCheck
+# Loading work.RemoteController
+run -all
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reação do hardware...
+# Ready:0
+# 
+# >>> READY DETECTADO! <<<
+# Dados Hex: 000010ef (Tecla: 10)
+# INTEGRIDADE: OK (Checksum valido).
+# IDENTIFICACAO: Tecla C
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(140)
+#    Time: 1110100 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 140
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:07:57 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 22:07:58 on Dec 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:07:58 on Dec 28,2025
+# vlog -reportprogress 300 -work work C:/ENGG56/RemoteController/Tb_RemoteController.v 
+# -- Compiling module tb_RemoteController_ManualCheck
+# 
+# Top level modules:
+# 	tb_RemoteController_ManualCheck
+# End time: 22:07:58 on Dec 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Break key hit
+restart -f
+# Loading work.tb_RemoteController_ManualCheck
+# Loading work.RemoteController
+run -all
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reação do hardware...
+# 
+# >>> READY DETECTADO! <<<
+# Dados Hex: 000010ef (Tecla: 10)
+# INTEGRIDADE: OK (Checksum valido).
+# IDENTIFICACAO: Tecla C
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(140)
+#    Time: 1110100 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 140
+add wave -position 7  sim:/tb_RemoteController_ManualCheck/Reset_In
+# Break key hit
+restart -f
+run -all
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reação do hardware...
+# 
+# >>> READY DETECTADO! <<<
+# Dados Hex: 000010ef (Tecla: 10)
+# INTEGRIDADE: OK (Checksum valido).
+# IDENTIFICACAO: Tecla C
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(140)
+#    Time: 1110100 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 140
