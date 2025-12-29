@@ -352,16 +352,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 704 256)
-	(pt 712 256)
-	(bus)
-)
-(connector
-	(pt 712 256)
-	(pt 720 256)
-	(bus)
-)
-(connector
 	(pt 216 176)
 	(pt 224 176)
 )
@@ -380,6 +370,16 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 224 192)
 	(pt 296 192)
+)
+(connector
+	(pt 704 256)
+	(pt 712 256)
+	(bus)
+)
+(connector
+	(pt 712 256)
+	(pt 720 256)
+	(bus)
 )
 (junction (pt 248 176))
 (junction (pt 712 256))

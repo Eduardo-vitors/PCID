@@ -4,7 +4,7 @@ module Acumulador (clk, in, load, clear, transf, out);
     input  [15:0] in;
     output reg [15:0] out;
 
-    // buffer do dado lido da memória
+    // Nome mais claro: buffer do dado lido da memória
     reg [15:0] data_buffer;
 
     // LOAD: captura o dado vindo da memória
