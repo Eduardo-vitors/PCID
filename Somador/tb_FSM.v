@@ -1,0 +1,240 @@
+/* TESTBENCH DO FSM (COM DISPLAY E CHECKS CORRIGIDOS) */
+
+`define periodo 20
+`define meioperiodo 10
+
+`timescale 1ns/1ns
+module FSM_TB;
+
+    reg clk, reset;
+    wire [4:0] address;
+    wire rden, wren, load, transf, clear, ready;
+
+    reg [12:0] time_pos_rden, time_neg_rden;
+    reg [12:0] time_pos_wren, time_neg_wren;
+    reg [12:0] time_pos_load, time_neg_load;
+    reg [12:0] time_pos_transf, time_neg_transf;
+    reg [12:0] time_addr;
+    reg endpoint;
+
+    reg checks_on;   // <-- NOVO: habilita checks só depois do reset estabilizar
+
+    // DUT
+    FSM fsm_test(
+        .clk(clk), .reset(reset),
+        .address(address),
+        .rden(rden), .wren(wren),
+        .load(load), .transf(transf), .clear(clear),
+        .ready(ready)
+    );
+
+    function [4:0] base8(input [4:0] a);
+        base8 = {a[4:3], 3'b000};
+    endfunction
+
+    function [2:0] mod8(input [4:0] a);
+        mod8 = a[2:0];
+    endfunction
+
+    initial begin
+        endpoint = 0;
+        checks_on = 0;
+
+        time_pos_rden   = 0;
+        time_neg_rden   = 0;
+        time_pos_wren   = 0;
+        time_neg_wren   = 0;
+        time_pos_load   = 0;
+        time_neg_load   = 0;
+        time_pos_transf = 0;
+        time_neg_transf = 0;
+        time_addr       = 0;
+
+        clk   = 0;
+        reset = 1;
+
+        $display("============================================================");
+        $display("INICIO DA SIMULACAO - FSM");
+        $display("Periodo=%0dns | MeioPeriodo=%0dns", `periodo, `meioperiodo);
+        $display("Reset ativo (reset=1).");
+        $display("============================================================");
+
+        #(4*`periodo);
+        reset = 0;
+        $display("T=%0t | Reset liberado (reset=0). FSM deve iniciar sequencia.", $time);
+
+        // <-- espera 1 ciclo pra tudo estabilizar (importante com reset assíncrono)
+        #(`periodo);
+        checks_on = 1;
+        $display("T=%0t | Checks habilitados.", $time);
+    end
+
+    // Clock
+    always begin
+        #`meioperiodo clk = ~clk;
+    end
+
+    // Monitor geral (a cada posedge)
+    always @(posedge clk) begin
+        $display("T=%0t | clk↑ | addr=%0d (base=%0d idx=%0d) | rden=%b wren=%b load=%b transf=%b clear=%b ready=%b | reset=%b",
+                 $time, address, base8(address), mod8(address),
+                 rden, wren, load, transf, clear, ready, reset);
+    end
+
+    // LOAD e TRANSF não podem estar 1 no mesmo posedge
+    always @(posedge clk) begin
+        if (checks_on) begin
+            if (load && transf) begin
+                $display("ERRO - LOAD e TRANSF ativos no mesmo ciclo (posedge).");
+                $display("T=%0t | addr=%0d | load=%b transf=%b", $time, address, load, transf);
+                $display("Simulacao encerrada com erros.");
+                $stop;
+            end
+        end
+    end
+
+    // ADDRESS checks + display
+    always @ (address) begin
+        if (checks_on) begin
+            time_addr = $time;
+
+            $display("T=%0t | ADDRESS mudou -> %0d (base=%0d idx=%0d)",
+                     $time, address, base8(address), mod8(address));
+
+            if(time_addr - time_neg_rden < `periodo || time_addr - time_pos_rden < `periodo) begin
+                $display("ERRO - Distancia entre alteracao de ADDRESS e alteracao de RDEN");
+                $display("deve ser de pelo menos um ciclo.");
+                $display("Simulacao encerrada com erros.");
+                $stop;
+            end
+
+            if(address == 31) begin
+                endpoint = 1;
+                $display("T=%0t | Endpoint atingido (address==31).", $time);
+            end
+
+            if(address == 0 && endpoint == 1) begin
+                #120 $display("T=%0t | Simulacao completada com sucesso. (voltou para address=0)", $time);
+                $stop;
+            end
+        end
+    end
+
+    // RDEN checks + display
+    always @ (rden) begin
+        if (checks_on) begin
+            if(rden) begin
+                time_pos_rden = $time;
+                $display("T=%0t | RDEN=1 (leitura iniciada) addr=%0d", $time, address);
+
+                if(time_pos_rden - time_addr < `periodo) begin
+                    $display("ERRO - Distancia entre alteracao de ADDRESS e posedge de RDEN");
+                    $display("deve ser de pelo menos um ciclo.");
+                    $display("Simulacao encerrada com erros.");
+                    $stop;
+                end
+            end else begin
+                time_neg_rden = $time;
+                $display("T=%0t | RDEN=0 (leitura encerrada) addr=%0d", $time, address);
+
+                if(time_neg_rden - time_neg_load < `periodo) begin
+                    $display("ERRO - Distancia entre negedges de RDEN e LOAD deve ser de pelo menos um ciclo de clock.");
+                    $display("Simulacao encerrada com erros.");
+                    $stop;
+                end
+                if(time_neg_rden - time_addr < `periodo) begin
+                    $display("ERRO - Distancia entre alteracao de ADDRESS e negedge de RDEN");
+                    $display("deve ser de pelo menos um ciclo.");
+                    $display("Simulacao encerrada com erros.");
+                    $stop;
+                end
+            end
+        end
+    end
+
+    // WREN checks + display
+    always @ (wren) begin
+        if (checks_on) begin
+            if(wren) begin
+                time_pos_wren = $time;
+                $display("T=%0t | WREN=1 (escrita iniciada) addr=%0d", $time, address);
+
+                if(time_pos_wren - time_pos_transf < `periodo || time_pos_wren - time_neg_transf < `periodo) begin
+                    $display("ERRO - Distancia entre posedge de WREN e alteracao de TRANSF");
+                    $display("deve ser de pelo menos um ciclo.");
+                    $display("Simulacao encerrada com erros.");
+                    $stop;
+                end
+                if(transf) begin
+                    $display("ERRO - TRANSF nao pode estar habilitado durante posedge de WREN.");
+                    $display("Simulacao encerrada com erros.");
+                    $stop;
+                end
+            end else begin
+                time_neg_wren = $time;
+                $display("T=%0t | WREN=0 (escrita encerrada) addr=%0d", $time, address);
+
+                if(time_neg_wren - time_pos_transf < `periodo || time_neg_wren - time_neg_transf < `periodo) begin
+                    $display("ERRO - Distancia entre negedge de WREN e alteracao de TRANSF");
+                    $display("deve ser de pelo menos um ciclo.");
+                    $display("Simulacao encerrada com erros.");
+                    $stop;
+                end
+                if(transf) begin
+                    $display("ERRO - TRANSF nao pode estar habilitado durante negedge de WREN.");
+                    $display("Simulacao encerrada com erros.");
+                    $stop;
+                end
+            end
+        end
+    end
+
+    // LOAD checks + display
+    always @ (load) begin
+        if (checks_on) begin
+            if(load) begin
+                time_pos_load = $time;
+                $display("T=%0t | LOAD=1 (captura dado) addr=%0d", $time, address);
+
+                if(time_pos_load - time_pos_rden < `periodo) begin
+                    $display("ERRO - Distancia entre posedges de LOAD e RDEN deve ser de pelo menos um ciclo de clock.");
+                    $display("Simulacao encerrada com erros.");
+                    $stop;
+                end
+            end else begin
+                time_neg_load = $time;
+                $display("T=%0t | LOAD=0 (fim do pulso)", $time);
+            end
+        end
+    end
+
+    // TRANSF checks + display
+    always @ (transf) begin
+        if (checks_on) begin
+            if(transf) begin
+                time_pos_transf = $time;
+                $display("T=%0t | TRANSF=1 (soma no acumulador) addr=%0d", $time, address);
+            end else begin
+                time_neg_transf = $time;
+                $display("T=%0t | TRANSF=0 (fim do pulso)", $time);
+            end
+        end
+    end
+
+    // CLEAR e READY (didático)
+    always @(clear) begin
+        if (checks_on) begin
+            if(clear == 1'b0)
+                $display("T=%0t | CLEAR=0 (zera/limpa acumulador entre blocos)", $time);
+            else
+                $display("T=%0t | CLEAR=1 (acumulador liberado para operar)", $time);
+        end
+    end
+
+    always @(ready) begin
+        if (checks_on) begin
+            if(ready) $display("T=%0t | READY=1 (fim da sequencia completa)", $time);
+        end
+    end
+
+endmodule

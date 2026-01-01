@@ -1,0 +1,151 @@
+`timescale 1ns/1ps
+
+module tb_FSM_Control;
+
+  // -------------------------
+  // Sinais do DUT
+  // -------------------------
+  reg         clk;
+  reg         rst;
+  reg         start;
+
+  wire [5:0]  address;
+  wire        rd_en;
+  reg  [11:0] data_out;
+
+  wire [2:0]  x, y, u, v;
+  wire        act_mac;
+  wire        acc;
+  wire        ready;
+  wire        rst_out;
+
+  // -------------------------
+  // Instancia DUT
+  // -------------------------
+  FSM_Control_Q3 dut (
+    .clk(clk),
+    .rst(rst),
+    .start(start),
+    .address(address),
+    .rd_en(rd_en),
+    .data_out(data_out),
+    .x(x), .y(y), .u(u), .v(v),
+    .act_mac(act_mac),
+    .acc(acc),
+    .ready(ready),
+    .rst_out(rst_out)
+  );
+
+  // -------------------------
+  // Clock: 10ns período
+  // -------------------------
+  initial clk = 0;
+  always #5 clk = ~clk;
+
+  // -------------------------
+  // "SRAM" fake com latência 1 clk
+  // - Quando rd_en=1, captura o address
+  // - No próximo clk, coloca data_out correspondente
+  // -------------------------
+  reg [5:0] addr_pipe;
+  reg       valid_pipe;
+
+  // memória simples: mem[a] = a*3 (só pra ter padrão)
+  reg [11:0] mem [0:63];
+  integer i;
+
+  initial begin
+    for (i = 0; i < 64; i = i + 1)
+      mem[i] = (i * 3) & 12'hFFF;
+  end
+
+  always @(posedge clk) begin
+    // pipeline de 1 ciclo
+    valid_pipe <= rd_en;
+    if (rd_en)
+      addr_pipe <= address;
+
+    if (valid_pipe)
+      data_out <= mem[addr_pipe];
+    else
+      data_out <= 12'hXXX; // indefinido quando não válido (pra enxergar no sim)
+  end
+
+  // -------------------------
+  // Monitor
+  // -------------------------
+  initial begin
+    $display(" time  clk rst start | addr rd_en | data_out | x y u v | acc act_mac ready rst_out");
+    $monitor("%4t   %0b   %0b   %0b   | %02d   %0b   | %03h    | %0d %0d %0d %0d |  %0b    %0b     %0b     %0b",
+             $time, clk, rst, start,
+             address, rd_en, data_out,
+             x, y, u, v,
+             acc, act_mac, ready, rst_out);
+  end
+
+  // -------------------------
+  // Checks (asserts simples)
+  // -------------------------
+  // 1) rd_en deve ser pulso de 1 ciclo:
+  reg rd_en_d;
+
+  // 2) acc deve acontecer 2 clocks depois de rd_en
+  // (S_RD -> S_WAIT -> S_MAC)
+  reg [1:0] rd_to_acc_shift;
+
+  always @(posedge clk) begin
+    rd_en_d <= rd_en;
+
+    // rd_en não pode ficar 1 por 2 ciclos seguidos
+    if (!rst && rd_en && rd_en_d) begin
+      $display("ERRO: rd_en ficou alto por mais de 1 ciclo em t=%0t", $time);
+      $stop;
+    end
+
+    // shift pra verificar delay até acc
+    rd_to_acc_shift <= {rd_to_acc_shift[0], rd_en};
+
+    // quando rd_en ocorreu há 2 clocks, acc tem que ser 1
+    if (!rst && rd_to_acc_shift[1]) begin
+      if (!acc) begin
+        $display("ERRO: acc nao ocorreu 2 clocks depois de rd_en em t=%0t", $time);
+        $stop;
+      end
+    end
+
+    // quando acc=1, act_mac também deveria ser 1 (no seu código, eles sobem juntos)
+    if (!rst && acc && !act_mac) begin
+      $display("ERRO: acc=1 mas act_mac=0 em t=%0t", $time);
+      $stop;
+    end
+  end
+
+  // -------------------------
+  // Estímulos
+  // -------------------------
+  initial begin
+    // init
+    rst   = 1'b1;
+    start = 1'b0;
+    data_out = 12'h000;
+
+    // segura reset por alguns ciclos
+    repeat (3) @(posedge clk);
+    rst = 1'b0;
+
+    // espera um pouco e dá start (pulso)
+    repeat (2) @(posedge clk);
+    start = 1'b1;
+    @(posedge clk);
+    start = 1'b0;
+
+    // espera terminar (ready=1)
+    wait (ready === 1'b1);
+    $display("OK: READY subiu em t=%0t (fim do processamento).", $time);
+
+    // finaliza
+    repeat (2) @(posedge clk);
+    $finish;
+  end
+
+endmodule

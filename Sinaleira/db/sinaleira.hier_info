@@ -1,0 +1,18 @@
+|semaforo
+LEDR[0] <= sinaleira:inst.NS
+LEDR[1] <= sinaleira:inst.LO
+SW0 => sinaleira:inst.A
+SW1 => sinaleira:inst.B
+SW3 => sinaleira:inst.C
+SW4 => sinaleira:inst.D
+
+
+|semaforo|sinaleira:inst
+A => NS.IN0
+B => NS.IN1
+C => NS.IN1
+D => NS.IN1
+NS <= NS.DB_MAX_OUTPUT_PORT_TYPE
+LO <= NS.DB_MAX_OUTPUT_PORT_TYPE
+
+
