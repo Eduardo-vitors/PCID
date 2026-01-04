@@ -1,0 +1,83 @@
+# Reading pref.tcl
+# do FSM_Control_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/ENGG56/MPEG {C:/ENGG56/MPEG/FSM_Control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:06:10 on Jan 01,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/MPEG" C:/ENGG56/MPEG/FSM_Control.v 
+# -- Compiling module FSM_Control
+# 
+# Top level modules:
+# 	FSM_Control
+# End time: 18:06:10 on Jan 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/ENGG56/MPEG {C:/ENGG56/MPEG/tb_FSM_Control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:06:11 on Jan 01,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/MPEG" C:/ENGG56/MPEG/tb_FSM_Control.v 
+# -- Compiling module FSM_Control_TB
+# 
+# Top level modules:
+# 	FSM_Control_TB
+# End time: 18:06:11 on Jan 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  FSM_Control_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" FSM_Control_TB 
+# Start time: 18:06:11 on Jan 01,2026
+# Loading work.FSM_Control_TB
+# Loading work.FSM_Control
+# 
+# do C:/ENGG56/MPEG/simulation/modelsim/wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate -expand -group INPUTS -label START /FSM_Control_TB/start
+# add wave -noupdate -expand -group INPUTS -label CLK /FSM_Control_TB/clk
+# add wave -noupdate -expand -group INPUTS -label RST_IN /FSM_Control_TB/rst_in
+# add wave -noupdate -expand -group OUTPUTS -label READY /FSM_Control_TB/ready
+# add wave -noupdate -expand -group OUTPUTS -label ACT_MAC /FSM_Control_TB/act_mac
+# add wave -noupdate -expand -group OUTPUTS -label RD_EN /FSM_Control_TB/rd_en
+# add wave -noupdate -expand -group OUTPUTS -label RST_OUT /FSM_Control_TB/rst_out
+# add wave -noupdate -expand -group OUTPUTS -label U -radix unsigned /FSM_Control_TB/u
+# add wave -noupdate -expand -group OUTPUTS -label V -radix unsigned /FSM_Control_TB/v
+# add wave -noupdate -expand -group OUTPUTS -label ADDRESS -radix unsigned /FSM_Control_TB/address
+# add wave -noupdate -expand -group OUTPUTS -label X -radix unsigned /FSM_Control_TB/x
+# add wave -noupdate -expand -group OUTPUTS -label Y -radix unsigned /FSM_Control_TB/y
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {1 us}
+# 
+# run -all
+# Simulacao finalizou com sucesso
+# ** Error (suppressible): (vsim-PLI-3085) $fwrite : Argument 1 is an unknown file descriptor.
+#    Time: 491630 ns  Iteration: 1  Process: /FSM_Control_TB/#ALWAYS#91 File: C:/ENGG56/MPEG/tb_FSM_Control.v Line: 96
+# ** Note: $stop    : C:/ENGG56/MPEG/tb_FSM_Control.v(222)
+#    Time: 491710 ns  Iteration: 0  Instance: /FSM_Control_TB
+# Break in Module FSM_Control_TB at C:/ENGG56/MPEG/tb_FSM_Control.v line 222
+# End time: 18:24:44 on Jan 01,2026, Elapsed time: 0:18:33
+# Errors: 1, Warnings: 0

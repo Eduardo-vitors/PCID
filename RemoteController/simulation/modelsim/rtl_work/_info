@@ -1,0 +1,111 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/ENGG56/RemoteController/simulation/modelsim
+vPLL
+Z1 !s110 1767564955
+!i10b 1
+!s100 :id3>h:PdQi;8WHOzJI`H0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ifn_]9HNmmkN[];g?PgHeN1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1767033770
+8C:/ENGG56/RemoteController/PLL.v
+FC:/ENGG56/RemoteController/PLL.v
+!i122 1
+L0 40 110
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1767564955.000000
+!s107 C:/ENGG56/RemoteController/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ENGG56/RemoteController|C:/ENGG56/RemoteController/PLL.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/ENGG56/RemoteController
+Z8 tCvgOpt 0
+n@p@l@l
+vPLL_altpll
+R1
+!i10b 1
+!s100 FY@8V5KCgTmm^^V`Y`>jH3
+R2
+ILDg:P1R=Q8;CTYAOO0]FE0
+R3
+R0
+w1767033942
+8C:/ENGG56/RemoteController/db/pll_altpll.v
+FC:/ENGG56/RemoteController/db/pll_altpll.v
+!i122 2
+L0 30 63
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ENGG56/RemoteController/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ENGG56/RemoteController/db|C:/ENGG56/RemoteController/db/pll_altpll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/ENGG56/RemoteController/db
+R8
+n@p@l@l_altpll
+vRemoteController
+!s110 1767564954
+!i10b 1
+!s100 RFV=G?mHJT]RDQ:]j]1YY3
+R2
+IFMX;:3^[Ke;Nndo;^4SU[0
+R3
+R0
+w1767033734
+8C:/ENGG56/RemoteController/RemoteController.v
+FC:/ENGG56/RemoteController/RemoteController.v
+!i122 0
+L0 3 84
+R4
+r1
+!s85 0
+31
+!s108 1767564954.000000
+!s107 C:/ENGG56/RemoteController/RemoteController.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ENGG56/RemoteController|C:/ENGG56/RemoteController/RemoteController.v|
+!i113 1
+R6
+R7
+R8
+n@remote@controller
+vtb_RemoteController_ManualCheck
+R1
+!i10b 1
+!s100 9D=_jSKP[9o;dBE1@R^i>3
+R2
+IE96?eJ;B^jagW]F@<4ibS0
+R3
+R0
+w1767033745
+8C:/ENGG56/RemoteController/Tb_RemoteController.v
+FC:/ENGG56/RemoteController/Tb_RemoteController.v
+!i122 3
+L0 3 159
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ENGG56/RemoteController/Tb_RemoteController.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ENGG56/RemoteController|C:/ENGG56/RemoteController/Tb_RemoteController.v|
+!i113 1
+R6
+R7
+R8
+ntb_@remote@controller_@manual@check

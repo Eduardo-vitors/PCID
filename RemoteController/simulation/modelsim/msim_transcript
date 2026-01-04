@@ -1,0 +1,110 @@
+# Reading pref.tcl
+# do RemoteController_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/ENGG56/RemoteController {C:/ENGG56/RemoteController/RemoteController.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:15:54 on Jan 04,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/RemoteController" C:/ENGG56/RemoteController/RemoteController.v 
+# -- Compiling module RemoteController
+# 
+# Top level modules:
+# 	RemoteController
+# End time: 19:15:54 on Jan 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/ENGG56/RemoteController {C:/ENGG56/RemoteController/PLL.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:15:55 on Jan 04,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/RemoteController" C:/ENGG56/RemoteController/PLL.v 
+# -- Compiling module PLL
+# 
+# Top level modules:
+# 	PLL
+# End time: 19:15:55 on Jan 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/ENGG56/RemoteController/db {C:/ENGG56/RemoteController/db/pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:15:55 on Jan 04,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/RemoteController/db" C:/ENGG56/RemoteController/db/pll_altpll.v 
+# -- Compiling module PLL_altpll
+# 
+# Top level modules:
+# 	PLL_altpll
+# End time: 19:15:55 on Jan 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/ENGG56/RemoteController {C:/ENGG56/RemoteController/Tb_RemoteController.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:15:55 on Jan 04,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ENGG56/RemoteController" C:/ENGG56/RemoteController/Tb_RemoteController.v 
+# -- Compiling module tb_RemoteController_ManualCheck
+# 
+# Top level modules:
+# 	tb_RemoteController_ManualCheck
+# End time: 19:15:55 on Jan 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_RemoteController_ManualCheck
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_RemoteController_ManualCheck 
+# Start time: 19:15:55 on Jan 04,2026
+# Loading work.tb_RemoteController_ManualCheck
+# Loading work.RemoteController
+# 
+# do C:/ENGG56/RemoteController/simulation/modelsim/wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate -expand -group REMOTE_CONTROLLER -label DADOS /tb_RemoteController_ManualCheck/uut/dados_brutos
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ddani  Hostname: DESKTOP-AE52GV6  ProcessID: 35056
+#           Attempting to use alternate WLF file "./wlftn2a30r".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftn2a30r
+# add wave -noupdate -expand -group REMOTE_CONTROLLER -label Reset_SYNC /tb_RemoteController_ManualCheck/Reset_In
+# add wave -noupdate -expand -group REMOTE_CONTROLLER -label SERIAL /tb_RemoteController_ManualCheck/Serial
+# add wave -noupdate -expand -group REMOTE_CONTROLLER -label TECLA -radix hexadecimal /tb_RemoteController_ManualCheck/Tecla
+# add wave -noupdate -expand -group REMOTE_CONTROLLER -label READY /tb_RemoteController_ManualCheck/Ready
+# add wave -noupdate -expand -group CLOCK -label CLOCK_RX /tb_RemoteController_ManualCheck/Clock_RX_38k
+# add wave -noupdate -expand -group CLOCK -label CLOCK_TX /tb_RemoteController_ManualCheck/Clock_TX_38k
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {1165605 ns}
+# 
+# run -all
+# 
+# --- ENVIANDO PACOTE MANUAL ---
+# Custom: 0000 | Key: 10 | Check: ef
+# -> Enviando Endpoint...
+# Pacote enviado. Aguardando reacao do hardware...
+# 
+# >>> READY DETECTADO! <<<
+# Dados Hex: 000010ef (Tecla: 10)
+# INTEGRIDADE: OK (Checksum valido).
+# IDENTIFICACAO: Tecla C
+# ** Note: $stop    : C:/ENGG56/RemoteController/Tb_RemoteController.v(159)
+#    Time: 1110100 ns  Iteration: 1  Instance: /tb_RemoteController_ManualCheck
+# Break in Module tb_RemoteController_ManualCheck at C:/ENGG56/RemoteController/Tb_RemoteController.v line 159
+# End time: 19:16:06 on Jan 04,2026, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 2

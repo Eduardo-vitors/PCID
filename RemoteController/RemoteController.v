@@ -1,0 +1,86 @@
+`timescale 1ns / 1ps
+
+module RemoteController (
+    input wire Clock,
+    input wire Reset_In,
+    input wire Serial,
+    output reg [7:0] Tecla,
+    output reg Ready
+);
+
+    reg [31:0] dados_brutos;
+    localparam ESTADO_ESPERA    = 2'd0;
+    localparam ESTADO_RECEBENDO = 2'd1;
+    localparam ESTADO_ENDPOINT  = 2'd2;
+    localparam ESTADO_PRONTO    = 2'd3;
+
+    reg [1:0] estado_atual;
+    reg [5:0] contador_bits;
+    reg [1:0] contador_ready;
+
+    reg rst_ff1, rst_sync;
+    reg serial_ff1, serial_sync;
+
+    always @(posedge Clock) begin
+        rst_ff1  <= Reset_In;
+        rst_sync <= rst_ff1;
+
+        serial_ff1  <= Serial;
+        serial_sync <= serial_ff1;
+    end
+
+    always @(posedge Clock) begin
+        if (rst_sync) begin
+            estado_atual   <= ESTADO_ESPERA;
+            dados_brutos   <= 32'b0;
+            Tecla          <= 8'b0;
+            Ready          <= 1'b0;
+            contador_bits  <= 6'd0;
+            contador_ready <= 2'd0;
+        end else begin
+            case (estado_atual)
+
+                ESTADO_ESPERA: begin
+                    Ready <= 0;
+                    if (serial_sync == 0) begin
+                        estado_atual  <= ESTADO_RECEBENDO;
+                        contador_bits <= 6'd32;
+                        dados_brutos  <= 32'b0;
+                    end
+                end
+
+                ESTADO_RECEBENDO: begin
+                    dados_brutos <= {dados_brutos[31:0], serial_sync};
+                    contador_bits <= contador_bits - 1;
+
+                    if (contador_bits == 1) begin
+                        estado_atual <= ESTADO_ENDPOINT; 
+                    end
+                end
+
+                ESTADO_ENDPOINT: begin
+                    estado_atual <= ESTADO_PRONTO;
+                        contador_ready <= 2'd3;
+                end
+
+                ESTADO_PRONTO: begin
+                    if (dados_brutos[15:8] == ~dados_brutos[7:0]) begin
+                        Tecla <= dados_brutos[15:8];
+                        Ready <= 1;
+                    end else begin
+                        Ready <= 0;
+                    end
+
+                    if (contador_ready > 0) begin
+                        contador_ready <= contador_ready - 1;
+                    end else begin
+                   Ready <= 0;
+                        estado_atual <= ESTADO_ESPERA;
+                    end
+                end
+
+            endcase
+        end
+    end
+
+endmodule

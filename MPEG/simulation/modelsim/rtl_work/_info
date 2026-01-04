@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/ENGG56/MPEG/simulation/modelsim
+vFSM_Control
+!s110 1767301570
+!i10b 1
+!s100 U=X?g`@gADS8MV7AhCY[51
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I?>TzTR?SQnBOc9m[IWD2M1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1766924892
+8C:/ENGG56/MPEG/FSM_Control.v
+FC:/ENGG56/MPEG/FSM_Control.v
+!i122 0
+L0 1 139
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1767301570.000000
+!s107 C:/ENGG56/MPEG/FSM_Control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ENGG56/MPEG|C:/ENGG56/MPEG/FSM_Control.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/ENGG56/MPEG
+Z6 tCvgOpt 0
+n@f@s@m_@control
+vFSM_Control_TB
+!s110 1767301571
+!i10b 1
+!s100 l9=MVTnMO1g1V7icC?;Pk1
+R1
+IXR<DK@fRQYG4[3c1HlRkE2
+R2
+R0
+w1766927183
+8C:/ENGG56/MPEG/tb_FSM_Control.v
+FC:/ENGG56/MPEG/tb_FSM_Control.v
+!i122 1
+L0 4 224
+R3
+r1
+!s85 0
+31
+!s108 1767301571.000000
+!s107 C:/ENGG56/MPEG/tb_FSM_Control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ENGG56/MPEG|C:/ENGG56/MPEG/tb_FSM_Control.v|
+!i113 1
+R4
+R5
+R6
+n@f@s@m_@control_@t@b
