@@ -1,0 +1,157 @@
+module FSM (
+    input  wire       clk,
+    input  wire       reset,
+
+    output reg [4:0]  address,
+    output reg        rden,
+    output reg        wren,
+
+    output reg        load,
+    output reg        clear,
+    output reg        transf,
+
+    output reg        ready
+);
+
+    // Estados
+    localparam S_INIT        = 4'd0;
+    localparam S_READ_ON     = 4'd1;  // liga rden e segura
+    localparam S_READ_WAIT1  = 4'd2;
+    localparam S_READ_WAIT2  = 4'd3;
+    localparam S_READ_WAIT3  = 4'd4;
+    localparam S_LOAD        = 4'd5;  // soma 1 valor
+    localparam S_NEXT_ADDR   = 4'd6;
+    localparam S_TRANSF      = 4'd7;  // joga soma na saída do acumulador
+    localparam S_WRITE_ON    = 4'd8;  // liga wren
+    localparam S_WRITE_OFF   = 4'd9;  // desliga wren
+    localparam S_NEXT_BLOCK  = 4'd10;
+    localparam S_READY       = 4'd11;
+
+    reg [3:0] state;
+
+    reg [4:0] base;  // 0, 8, 16, 24
+    reg [2:0] i;     // 0..6
+
+    // Função de "próximo base"
+    wire last_block = (base == 5'd24);
+    wire last_i     = (i == 3'd6);
+
+    always @(posedge clk) begin
+        if (reset) begin
+            address <= 5'd0;
+            rden    <= 1'b0;
+            wren    <= 1'b0;
+            load    <= 1'b0;
+            clear   <= 1'b1;  // zera no reset
+            transf  <= 1'b0;
+            ready   <= 1'b0;
+
+            base    <= 5'd0;
+            i       <= 3'd0;
+            state   <= S_INIT;
+
+        end else begin
+            // padrões (pulsos de 1 ciclo)
+            load   <= 1'b0;
+            clear  <= 1'b0;
+            transf <= 1'b0;
+            ready  <= 1'b0;
+
+            case (state)
+
+                S_INIT: begin
+                    // prepara primeiro bloco
+                    base    <= 5'd0;
+                    i       <= 3'd0;
+                    clear   <= 1'b1;
+                    rden    <= 1'b0;
+                    wren    <= 1'b0;
+                    address <= 5'd0;
+                    state   <= S_NEXT_ADDR;
+                end
+
+                // Atualiza o endereço do valor a ler: base + i
+                S_NEXT_ADDR: begin
+                    address <= base + i;
+                    state   <= S_READ_ON;
+                end
+
+                // Liga RDEN e segura por tempo suficiente
+                // Seu TB exige RDEN ativo >= 4*periodo (4 clocks) antes de desligar.
+                S_READ_ON: begin
+                    rden  <= 1'b1;
+                    state <= S_READ_WAIT1;
+                end
+
+                S_READ_WAIT1: begin
+                    state <= S_READ_WAIT2;
+                end
+
+                S_READ_WAIT2: begin
+                    state <= S_READ_WAIT3;
+                end
+
+                // Aqui já passou tempo suficiente:
+                // - dado da memória está estável
+                // - RDEN ainda está ativo
+                S_READ_WAIT3: begin
+                    state <= S_LOAD;
+                end
+
+                // Soma 1 valor (o acumulador pega din diretamente do TOP)
+                S_LOAD: begin
+                    load <= 1'b1;
+                    rden <= 1'b0;  // pode desligar agora (já garantiu tempo mínimo)
+                    state <= (last_i ? S_TRANSF : S_NEXT_ADDR);
+                    if (!last_i) begin
+                        i <= i + 3'd1;
+                    end
+                end
+
+                // Transferir soma para a saída do acumulador (dataout do TOP)
+                S_TRANSF: begin
+                    transf <= 1'b1;
+                    state  <= S_WRITE_ON;
+                end
+
+                // Preparar escrita do resultado no endereço base+7
+                S_WRITE_ON: begin
+                    address <= base + 5'd7;
+                    wren    <= 1'b1;
+                    state   <= S_WRITE_OFF;
+                end
+
+                // Desliga escrita e decide próximo bloco
+                S_WRITE_OFF: begin
+                    wren <= 1'b0;
+                    state <= S_NEXT_BLOCK;
+                end
+
+                S_NEXT_BLOCK: begin
+                    // terminou bloco: zera acumulador e vai para próximo base
+                    clear <= 1'b1;
+                    i     <= 3'd0;
+
+                    if (last_block) begin
+                        state <= S_READY;
+                    end else begin
+                        base  <= base + 5'd8;
+                        state <= S_NEXT_ADDR;
+                    end
+                end
+
+                // Ready por 1 clock e reinicia
+                S_READY: begin
+                    ready <= 1'b1;
+                    state <= S_INIT;
+                end
+
+                default: begin
+                    state <= S_INIT;
+                end
+
+            endcase
+        end
+    end
+
+endmodule
